@@ -1,4 +1,4 @@
-*{                                      /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
+*{   /*Resetter alt default setting som f.eks. margin og padding*/
     margin: 0;
     padding: 0;
     box-sizing:border-box;
@@ -10,28 +10,73 @@
 }
 
 body{
-    h1{
-        font-family: passion;
-        font-size: 4rem;
-        z-index: 1;
-        position: absolute;
-        color: orange;
-    }
-  
     background-color: black;
-
 }
-
-
-
 
 @media screen and (max-width: 390px){
+    
+    #desktop{
+        display: none;
+    }
 
+    .background{
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Sikrer, at baggrundsområdet fylder hele skærmen */
+        overflow-x: hidden;
+    }
+    
+    .background img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Sørger for, at billedet dækker hele området uden at forvrænges */
+    }
+    
+    .background h1 {
+        font-family: passion;
+        font-size: 3.5rem;
+        color: black;
+        text-align: center;
+        position: absolute; /* Gør det muligt at placere teksten oven på billedet */
+        top: 15%; /* Placerer teksten vertikalt i midten */
+        left: 50%; /* Placerer teksten horisontalt i midten */
+        transform: translate(-50%, -50%); /* Justerer for elementets egen bredde og højde */
+        z-index: 1;
+    }
 }
 
-@media screen and (max-width: 768px){
 
-}
+@media screen and (min-width: 391px){
+    #phone{
+        display: none;
+    }
+
+    .background{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    
+    .background img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .background h1 {
+        font-family: passion;
+        font-size: 8rem;
+        color: black;
+        text-align: center;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    }
 
 
 @media screen and (max-width: 1280px){
