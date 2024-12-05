@@ -1,0 +1,43 @@
+*{                                      /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+@font-face {
+    font-family: passion;
+    src: url(../fonts/passion.ttf);
+}
+
+body{
+    h1{
+        font-family: passion;
+        font-size: 4rem;
+        z-index: 1;
+        position: absolute;
+        color: orange;
+    }
+  
+    background-color: black;
+
+}
+
+
+
+
+@media screen and (max-width: 390px){
+
+}
+
+@media screen and (max-width: 768px){
+
+}
+
+
+@media screen and (max-width: 1280px){
+
+}
+
+@media screen and (min-width: 1281px){
+
+}
