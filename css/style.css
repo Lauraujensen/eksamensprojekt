@@ -9,6 +9,98 @@
     src: url(../fonts/passion.ttf);
 }
 
+header .nav-bar{
+    background-color: black;
+    color: white;
+}
+
+header nav ul{                  /*Styling af navigationsbar*/
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul li{               /*Definere position af navigationsbar listitem*/
+    position: relative;
+    padding: 0;
+}
+
+header nav ul li a{             /*Styling af links i navigationsbar*/
+    text-decoration: none;
+    font-size: 1.55rem;
+    padding: 1.5rem;
+    color: var(--white);
+    display: block;
+    background: var(--black);
+}
+
+nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
+    background: var(--dark-grey);
+    color: var(--white);
+}
+
+nav ul li ul{            /*Styling af dropdown menu i navbar*/
+    position: absolute;
+    left: 0;
+    width: 100%;                    /*Definere at den skal udfylde hele siden*/
+    background: var(--orange);
+    display: none;
+    z-index: 10;                    /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
+}
+
+nav ul li ul li{         /*Styling af list item i dropdown menu*/
+    width: 100%;
+    border-top: 0.5px solid var(--dark-grey);
+}
+
+nav ul li ul li ul{      /*Styling af nested dropdown menu*/
+    left: 12.5rem;
+    top: 0;
+}
+
+nav ul li:focus-within > ul,
+nav ul li:hover > ul{     /*Definere display af dropdown menu på hover eller fokus*/
+    display: block;
+    z-index: 10;                     /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
+}
+
+header::after {                     /*Fjern floats efter header content*/
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #444444;
+	position: absolute;
+	z-index: 10;
+	display: none;
+}
+nav ul.sub-menus li {
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+nav ul.sub-menus a {
+	color: var(--orange);
+	font-size: 1.25rem;
+}
+nav li:hover ul.sub-menus {
+	display: block
+}
+nav ul.sub-menus a:hover{
+	background: var(--dark-grey);
+	color: var(--white);
+}
+
+
+
+
+
 body{
     background-color: black;
 }
@@ -75,7 +167,6 @@ body{
         transform: translate(-50%, -50%);
         z-index: 1;
     }
-
     }
 
 
@@ -86,3 +177,4 @@ body{
 @media screen and (min-width: 1281px){
 
 }
+
