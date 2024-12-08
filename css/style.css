@@ -122,6 +122,12 @@ body{
 }
 
 
+
+
+
+
+
+
 @media screen and (max-width: 390px){
     
     #desktop{
@@ -156,6 +162,17 @@ body{
         transform: translate(-50%, -50%); /* Justerer for elementets egen bredde og højde */
         z-index: 1;
     }
+
+    .wrapper{
+        margin: 0 auto;
+        width: 17rem;
+    }
+
+    .vinyl-img{
+        width: 17rem;
+        z-index: 10;
+    }
+
 }
 
 
@@ -192,6 +209,16 @@ body{
         transform: translate(-50%, -50%);
         z-index: 1;
     }
+
+    .wrapper{
+        width: 28rem;
+        margin: 0 auto;
+    }
+
+    .vinyl-img{
+        width: 28rem;
+        z-index: 10;
+    }
     }
 
 
@@ -223,6 +250,11 @@ body{
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
+    }
+
+    .vinyl-img{
+        width: 17rem;
+        z-index: 10;
     }
 
 }
