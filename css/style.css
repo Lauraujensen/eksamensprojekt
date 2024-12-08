@@ -13,9 +13,24 @@
     src: url(../fonts/passion.ttf);
 }
 
+@font-face {
+    font-family: bebas;
+    src: url(../fonts/bebas.ttf);
+}
+
+
+:root{                              /*Definere css variables for farver for nemmere tilgang*/
+    --white: #ffffff;
+    --orange: #ff9327;
+    --black: #000000;
+    --light-grey: #cecfca;
+    --purple: #361f45;
+}
+
 header .nav-bar{
     background-color: black;
     color: white;
+    font-family: bebas;
 }
 
 header nav ul{                  /*Styling af navigationsbar*/
@@ -40,7 +55,7 @@ header nav ul li a{             /*Styling af links i navigationsbar*/
 }
 
 nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
-    background: var(--dark-grey);
+    background: var(--purple);
     color: var(--white);
 }
 
@@ -55,7 +70,7 @@ nav ul li ul{            /*Styling af dropdown menu i navbar*/
 
 nav ul li ul li{         /*Styling af list item i dropdown menu*/
     width: 100%;
-    border-top: 0.5px solid var(--dark-grey);
+    border-top: 0.5px solid var(--black);
 }
 
 nav ul li ul li ul{      /*Styling af nested dropdown menu*/
@@ -79,7 +94,7 @@ nav ul.sub-menus{
 	height: auto;
 	overflow: hidden;
 	width: 170px;
-	background: #444444;
+	background: var(--purple);
 	position: absolute;
 	z-index: 10;
 	display: none;
@@ -97,7 +112,7 @@ nav li:hover ul.sub-menus {
 	display: block
 }
 nav ul.sub-menus a:hover{
-	background: var(--dark-grey);
+	background: var(--purple);
 	color: var(--white);
 }
 
