@@ -58,7 +58,7 @@ header nav ul li{               /*Definerer position af navigationsbar listitem*
 
 header nav ul li a{             /*Styling af links i navigationsbar*/
     text-decoration: none;
-    font-size: 1.55rem;
+    font-size: 1.5rem;
     padding: 1.5rem;
     color: var(--white);
     display: block;
@@ -117,7 +117,7 @@ nav ul.sub-menus li {
 }
 nav ul.sub-menus a {
     color: var(--orange);
-    font-size: 1.25rem;
+    font-size: 1.3rem;
 }
 nav li:hover ul.sub-menus {
     display: block
@@ -509,94 +509,20 @@ body{
         border-radius: 1.8rem;
     } 
 
-    header .nav-bar{
-        background-color: black;
-        color: white;
-        font-family: bebas;
-    }
-    
-    header nav ul{               
-        list-style: none;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    header nav ul li{              
-        position: relative;
-        padding: 0;
-    }
-    
     header nav ul li a{         
         text-decoration: none;
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 1.5rem;
         color: var(--white);
         display: block;
         background: var(--black);
     }
-    
-    nav ul li a:hover{   
-        background: var(--purple);
-        color: var(--white);
-    }
-    
-    nav ul li ul{          
-        position: absolute;
-        left: 0;
-        width: 100%;                    
-        background: var(--orange);
-        display: none;
-        z-index: 10;                  
-    }
-    
-    nav ul li ul li{     
-        width: 100%;
-        border-top: 0.5px solid var(--black);
-    }
-    
-    nav ul li ul li ul{      
-        left: 11rem;
-        top: 0;
-    }
-    
-    nav ul li:focus-within > ul,
-    nav ul li:hover > ul{ 
-        display: block;
-        z-index: 10;                     
-    }
-    
-    header::after {                     
-        content: "";
-        display: table;
-        clear: both;
-    }
-    
-    nav ul.sub-menus{
-        height: auto;
-        overflow: hidden;
-        width: 170px;
-        background: var(--purple);
-        position: absolute;
-        z-index: 10;
-        display: none;
-    }
-    nav ul.sub-menus li {
-        display: block;
-        text-align: left;
-        width: 100%;
-    }
+   
     nav ul.sub-menus a {
         color: var(--orange);
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
-    nav li:hover ul.sub-menus {
-        display: block
-    }
-    nav ul.sub-menus a:hover{
-        background: var(--purple);
-        color: var(--white);
-    }
+
 }
 
 
@@ -664,93 +590,18 @@ body{
         text-align: center;
         border-radius: 1.8rem;
     } 
-
-    header .nav-bar{
-        background-color: black;
-        color: white;
-        font-family: bebas;
-    }
-    
-    header nav ul{               
-        list-style: none;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    header nav ul li{              
-        position: relative;
-        padding: 0;
-    }
-    
+ 
     header nav ul li a{         
         text-decoration: none;
-        font-size: 2.5rem;
+        font-size: 1.8rem;
         padding: 1.5rem;
         color: var(--white);
         display: block;
         background: var(--black);
     }
-    
-    nav ul li a:hover{   
-        background: var(--purple);
-        color: var(--white);
-    }
-    
-    nav ul li ul{          
-        position: absolute;
-        left: 0;
-        width: 100%;                    
-        background: var(--orange);
-        display: none;
-        z-index: 10;                  
-    }
-    
-    nav ul li ul li{     
-        width: 100%;
-        border-top: 0.5px solid var(--black);
-    }
-    
-    nav ul li ul li ul{      
-        left: 12.5rem;
-        top: 0;
-    }
-    
-    nav ul li:focus-within > ul,
-    nav ul li:hover > ul{ 
-        display: block;
-        z-index: 10;                     
-    }
-    
-    header::after {                     
-        content: "";
-        display: table;
-        clear: both;
-    }
-    
-    nav ul.sub-menus{
-        height: auto;
-        overflow: hidden;
-        width: 170px;
-        background: var(--purple);
-        position: absolute;
-        z-index: 10;
-        display: none;
-    }
-    nav ul.sub-menus li {
-        display: block;
-        text-align: left;
-        width: 100%;
-    }
+  
     nav ul.sub-menus a {
         color: var(--orange);
-        font-size: 2.2rem;
-    }
-    nav li:hover ul.sub-menus {
-        display: block
-    }
-    nav ul.sub-menus a:hover{
-        background: var(--purple);
-        color: var(--white);
+        font-size: 1.5rem;
     }
 }
