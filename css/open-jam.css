@@ -1,0 +1,248 @@
+*{   /*Resetter alt default setting som f.eks. margin og padding*/
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+@font-face {
+    font-family: passion;
+    src: url(../fonts/passion.ttf);
+}
+
+@font-face {
+    font-family: bebas;
+    src: url(../fonts/bebas.ttf);
+}
+
+@font-face {
+    font-family: cairo;
+    src: url(../fonts/cairo.ttf);
+}
+
+:root{                              /*Definere css variables for farver for nemmere tilgang*/
+    --white: #ffffff;
+    --orange: #ff9327;
+    --black: #000000;
+    --light-grey: #cecfca;
+    --purple: #361f45;
+}
+
+header .nav-bar{
+    background-color: black;
+    color: white;
+    font-family: bebas;
+}
+
+header nav ul{                  /*Styling af navigationsbar*/
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul li{               /*Definerer position af navigationsbar listitem*/
+    position: relative;
+    padding: 0;
+}
+
+header nav ul li a{             /*Styling af links i navigationsbar*/
+    text-decoration: none;
+    font-size: 1.55rem;
+    padding: 1.5rem;
+    color: var(--white);
+    display: block;
+    background: var(--black);
+}
+
+nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
+    background: var(--purple);
+    color: var(--white);
+}
+
+nav ul li ul{            /*Styling af dropdown menu i navbar*/
+    position: absolute;
+    left: 0;
+    width: 100%;                    /*Definerer at den skal udfylde hele siden*/
+    background: var(--orange);
+    display: none;
+    z-index: 10;                    /*Styrer stablingrækkefølge højere værdi ligger øverst, i dette tilfælde ligger alt under ul øverst for alle andre elementer*/
+}
+
+nav ul li ul li{         /*Styling af list item i dropdown menu*/
+    width: 100%;
+    border-top: 0.5px solid var(--black);
+}
+
+nav ul li ul li ul{      /*Styling af nested dropdown menu*/
+    left: 12.5rem;
+    top: 0;
+}
+
+nav ul li:focus-within > ul,
+nav ul li:hover > ul{     /*Definerer display af dropdown menu på hover eller fokus*/
+    display: block;
+    z-index: 10;                     /*Styrer stablingrækkefølge højere værdi ligger øverst, i dette tilfælde ligger alt under ul øverst for alle andre elementer*/
+}
+
+header::after {                     /*Fjern floats efter header content*/
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: var(--purple);
+	position: absolute;
+	z-index: 10;
+	display: none;
+}
+nav ul.sub-menus li {
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+nav ul.sub-menus a {
+	color: var(--orange);
+	font-size: 1.25rem;
+}
+nav li:hover ul.sub-menus {
+	display: block
+}
+nav ul.sub-menus a:hover{
+	background: var(--purple);
+	color: var(--white);
+}
+
+
+body{
+    background-color: black;
+}
+
+
+
+
+
+@media screen and (max-width: 390px){
+    
+    .nav-bar{
+        display: none;
+    }
+    
+    h1 {
+        font-family: passion;
+        font-size: 2rem;
+        color: var(--white);
+        text-align: center;
+        width: 20rem;
+        position: absolute; /* Gør det muligt at placere teksten oven på billedet */
+        top: 15%; /* Placerer teksten vertikalt i midten */
+        left: 50%; /* Placerer teksten horisontalt i midten */
+        transform: translate(-50%, -50%); /* Justerer for elementets egen bredde og højde */
+        z-index: 1;
+    }
+
+    h2{
+        font-family: cairo;
+        font-size: 1.3rem;
+        width: 16rem;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--white);
+        position: absolute;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    #logo{
+        width: 2.5rem;
+        position: fixed;
+        right: 3%;
+        top: 90%;
+        z-index: 20;
+    }
+
+}
+
+
+@media screen and (min-width: 391px) and (max-width: 768px){
+
+    .nav-bar{
+        display: none;
+    }
+    
+    h1 {
+        font-family: passion;
+        font-size: 3rem;
+        width: 28rem;
+        color: var(--white);
+        position: absolute;
+        text-align: center;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #logo{
+        width: 2.5rem;
+        position: fixed;
+        right: 3%;
+        top: 90%;
+        z-index: 20;
+    }
+    
+    }
+
+
+@media screen and (min-width: 769px) and (max-width: 1281){
+
+    h1 {
+        font-family: passion;
+        font-size: 6rem;
+        color: var(--white);
+        text-align: center;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #logo{
+        width: 2.5rem;
+        position: fixed;
+        right: 3%;
+        top: 90%;
+        z-index: 20;
+    }
+
+}
+
+
+@media screen and (min-width: 1282px){
+
+    h1 {
+        font-family: passion;
+        font-size: 8rem;
+        width: 70rem;
+        color: var(--white);
+        text-align: center;
+        position: absolute;
+        top: 28%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #logo{
+        width: 2.5rem;
+        position: fixed;
+        right: 3%;
+        top: 90%;
+        z-index: 20;
+    }
+}
