@@ -121,6 +121,13 @@ body{
 }
 
 
+  #tilbage-text {
+    transition: transform 0.3s ease, 0.3s ease;
+  }
+  
+  #tilbage-text:hover{
+    font-weight: bolder;
+}
 
 
 /* Smartphones i stående retning (meget små skærme, f.eks. iPhone SE) */
@@ -171,7 +178,22 @@ body{
         text-align: center;
     }
 
+    #tilbage{
+        width: 1rem;
+        position: absolute;
+        top: 30%;
+        z-index: 10;
+        left: 5%;
+    }
 
+    #tilbage-text{
+        color: var(--white);
+        font-size: 0.5rem;
+        font-family: cairo;
+        position: absolute;
+        top: 30%;
+        left: 10%;
+    }
 }
 
 /* Smartphones i stående retning (typisk, f.eks. iPhone 12, Galaxy S21) */
@@ -220,6 +242,23 @@ body{
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+    }
+
+    #tilbage{
+        width: 1rem;
+        position: absolute;
+        top: 30%;
+        z-index: 10;
+        left: 5%;
+    }
+
+    #tilbage-text{
+        color: var(--white);
+        font-size: 0.5rem;
+        font-family: cairo;
+        position: absolute;
+        top: 30%;
+        left: 10%;
     }
 }
 
@@ -270,6 +309,25 @@ body{
         transform: translate(-50%, -50%);
         text-align: center;
     }
+
+    #tilbage{
+        width: 1.5rem;
+        position: absolute;
+        top: 40%;
+        z-index: 10;
+        left: 5%;
+        transform: translate(-5%, -5%);
+    }
+
+    #tilbage-text{
+        color: var(--white);
+        font-size: 0.8rem;
+        font-family: cairo;
+        position: absolute;
+        top: 40%;
+        left: 11%;
+        transform: translate(-11%, -11%);
+    }
 }
 
 /* Tablets i stående retning (f.eks. iPads, Galaxy Tab) */
@@ -319,6 +377,25 @@ body{
         transform: translate(-50%, -50%);
         text-align: center;
     }
+
+    #tilbage{
+        width: 1.5rem;
+        position: absolute;
+        top: 40%;
+        z-index: 10;
+        left: 5%;
+        transform: translate(-5%, -5%);
+    }
+
+    #tilbage-text{
+        color: var(--white);
+        font-size: 0.8rem;
+        font-family: cairo;
+        position: absolute;
+        top: 40%;
+        left: 9.5%;
+        transform: translate(-11%, -11%);
+    }
 }
 
 /* Små laptops og store tablets i landskab (f.eks. MacBook Air 13") */
@@ -364,6 +441,25 @@ body{
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+    }
+
+    #tilbage{
+        width: 1.5rem;
+        position: absolute;
+        top: 40%;
+        z-index: 10;
+        left: 5%;
+        transform: translate(-5%, -5%);
+    }
+
+    #tilbage-text{
+        color: var(--white);
+        font-size: 0.8rem;
+        font-family: cairo;
+        position: absolute;
+        top: 40%;
+        left: 9.5%;
+        transform: translate(-11%, -11%);
     }
 }
 
@@ -411,6 +507,25 @@ body{
         text-align: center;
         padding-bottom: 6rem;
     }
+
+    #tilbage{
+        width: 1.5rem;
+        position: absolute;
+        top: 65%;
+        z-index: 10;
+        left: 5%;
+        transform: translate(-5%, -5%);
+    }
+
+    #tilbage-text{
+        color: var(--white);
+        font-size: 1rem;
+        font-family: cairo;
+        position: absolute;
+        top: 65%;
+        left: 7.3%;
+        transform: translate(-11%, -11%);
+    }
 }
 
 /* Store stationære skærme (f.eks. 4K og ultrawide skærme) */
@@ -457,4 +572,24 @@ body{
         text-align: center;
         padding-bottom: 6rem;
     }
+
+    #tilbage{
+        width: 1.6rem;
+        position: absolute;
+        top: 65%;
+        z-index: 10;
+        left: 5%;
+        transform: translate(-5%, -5%);
+    }
+
+    #tilbage-text{
+        color: var(--white);
+        font-size: 1rem;
+        font-family: cairo;
+        position: absolute;
+        top: 65%;
+        left: 7.5%;
+        transform: translate(-11%, -11%);
+    }
+    
 }
