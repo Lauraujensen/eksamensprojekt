@@ -130,7 +130,7 @@ body{
     
     h1 {
         font-family: passion;
-        font-size: 2.4rem;
+        font-size: 2.2rem;
         color: var(--black);
         text-align: center;
         width: 20rem;
@@ -143,9 +143,9 @@ body{
 
     h2{
         font-family: cairo;
-        font-size: 1.3rem;
+        font-size: 1.05rem;
         text-transform: uppercase;
-        width: 20rem;
+        width: 16rem;
         top: 42%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -177,7 +177,7 @@ body{
         padding: 1rem;
         color: var(--light-grey);
         position: absolute;
-        top: 80%;
+        top: 85%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-family: cairo;
@@ -269,10 +269,10 @@ body{
     
     h1 {
         font-family: passion;
-        font-size: 4rem;
+        font-size: 3.7rem;
         color: var(--black);
         text-align: center;
-        width: 40rem;
+        width: 32rem;
         position: absolute;
         top: 15%;
         left: 50%;
@@ -285,7 +285,7 @@ body{
         font-size: 1.1rem;
         text-transform: uppercase;
         width: 17rem;
-        top: 38%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: var(--light-grey);
@@ -306,7 +306,7 @@ body{
         width: 3.5rem;
         position: fixed;
         right: 3%;
-        top: 67%;
+        top: 90%;
         z-index: 20;
     }
 
@@ -316,7 +316,7 @@ body{
         padding: 1rem;
         color: var(--light-grey);
         position: absolute;
-        top: 68%;
+        top: 80%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-family: cairo;
@@ -382,9 +382,8 @@ body{
         padding: 1rem;
         color: var(--light-grey);
         position: absolute;
-        top: 120%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 90%;
+        left: 6%;
         font-family: cairo;
         text-align: center;
         background-color: #1d1d1d;
