@@ -132,7 +132,7 @@ body{
     
     h1 {
         font-family: passion;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         color: var(--white);
         text-align: center;
         width: 22rem;
@@ -169,7 +169,7 @@ body{
     
     h1 {
         font-family: passion;
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         color: var(--white);
         text-align: center;
         width: 22rem;
@@ -206,10 +206,10 @@ body{
     
     h1 {
         font-family: passion;
-        font-size: 1.7rem;
+        font-size: 1.9rem;
         color: var(--white);
         text-align: center;
-        width: 22rem;
+        width: 26rem;
         position: absolute;
         top: 10%;
         left: 50%;
@@ -246,7 +246,7 @@ body{
         font-size: 2.5rem;
         color: var(--white);
         text-align: center;
-        width: 30rem;
+        width: 35rem;
         position: absolute;
         top: 10%;
         left: 50%;
@@ -256,14 +256,14 @@ body{
 
     #banner{
         width: 100%;
-        height: 40vh;
+        height: 30vh;
         overflow-x: hidden;
         position: absolute;
         top: 10%;
     }
 
     #logo{
-        width: 2.5rem;
+        width: 3rem;
         position: fixed;
         right: 3%;
         top: 90%;
