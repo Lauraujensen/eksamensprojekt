@@ -1,0 +1,372 @@
+*{   /*Resetter alt default setting som f.eks. margin og padding*/
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+@font-face {
+    font-family: passion;
+    src: url(../fonts/passion.ttf);
+}
+
+@font-face {
+    font-family: bebas;
+    src: url(../fonts/bebas.ttf);
+}
+
+@font-face {
+    font-family: cairo;
+    src: url(../fonts/cairo.ttf);
+}
+
+:root{                              /*Definere css variables for farver for nemmere tilgang*/
+    --white: #ffffff;
+    --orange: #ff9327;
+    --black: #000000;
+    --light-grey: #cecfca;
+    --purple: #361f45;
+}
+
+header .nav-bar{
+    background-color: black;
+    color: white;
+    font-family: bebas;
+}
+
+header nav ul{                  /*Styling af navigationsbar*/
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul li{               /*Definerer position af navigationsbar listitem*/
+    position: relative;
+    padding: 0;
+}
+
+header nav ul li a{             /*Styling af links i navigationsbar*/
+    text-decoration: none;
+    font-size: 1.55rem;
+    padding: 1.5rem;
+    color: var(--white);
+    display: block;
+    background: var(--black);
+}
+
+nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
+    background: var(--purple);
+    color: var(--white);
+}
+
+nav ul li ul{            /*Styling af dropdown menu i navbar*/
+    position: absolute;
+    left: 0;
+    width: 100%;                    /*Definerer at den skal udfylde hele siden*/
+    background: var(--orange);
+    display: none;
+    z-index: 10;                    /*Styrer stablingrækkefølge højere værdi ligger øverst, i dette tilfælde ligger alt under ul øverst for alle andre elementer*/
+}
+
+nav ul li ul li{         /*Styling af list item i dropdown menu*/
+    width: 100%;
+    border-top: 0.5px solid var(--black);
+}
+
+nav ul li ul li ul{      /*Styling af nested dropdown menu*/
+    left: 12.5rem;
+    top: 0;
+}
+
+nav ul li:focus-within > ul,
+nav ul li:hover > ul{     /*Definerer display af dropdown menu på hover eller fokus*/
+    display: block;
+    z-index: 10;                     /*Styrer stablingrækkefølge højere værdi ligger øverst, i dette tilfælde ligger alt under ul øverst for alle andre elementer*/
+}
+
+header::after {                     /*Fjern floats efter header content*/
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: var(--purple);
+	position: absolute;
+	z-index: 10;
+	display: none;
+}
+nav ul.sub-menus li {
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+nav ul.sub-menus a {
+	color: var(--orange);
+	font-size: 1.25rem;
+}
+nav li:hover ul.sub-menus {
+	display: block
+}
+nav ul.sub-menus a:hover{
+	background: var(--purple);
+	color: var(--white);
+}
+
+body{
+    background-color: black;
+}
+
+
+
+
+/* Smartphones i stående retning (meget små skærme, f.eks. iPhone SE) */
+@media screen and (max-width: 360px) {
+    /* CSS for meget små smartphones */
+    .nav-bar{
+        display: none;
+    }
+    
+    h1 {
+        font-family: passion;
+        font-size: 1.5rem;
+        color: var(--white);
+        text-align: center;
+        width: 22rem;
+        position: absolute; /* Gør det muligt at placere teksten oven på billedet */
+        top: 10%; /* Placerer teksten vertikalt i midten */
+        left: 50%; /* Placerer teksten horisontalt i midten */
+        transform: translate(-50%, -50%); /* Justerer for elementets egen bredde og højde */
+        z-index: 1;
+    }
+
+    #banner{
+        width: 100%;
+        height: 20vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 10%;
+    }
+
+    #logo{
+        width: 2.5rem;
+        position: fixed;
+        right: 3%;
+        top: 90%;
+        z-index: 20;
+    }
+}
+
+/* Smartphones i stående retning (typisk, f.eks. iPhone 12, Galaxy S21) */
+@media screen and (min-width: 361px) and (max-width: 430px) {
+    /* CSS for almindelige smartphones */
+    .nav-bar{
+        display: none;
+    }
+    
+    h1 {
+        font-family: passion;
+        font-size: 1.6rem;
+        color: var(--white);
+        text-align: center;
+        width: 22rem;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #banner{
+        width: 100%;
+        height: 20vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 20%;
+    }
+
+    #logo{
+        width: 2.5rem;
+        position: fixed;
+        right: 3%;
+        top: 90%;
+        z-index: 20;
+    }
+}
+
+/* Små tablets og store smartphones (f.eks. iPad Mini, Galaxy Fold) */
+@media screen and (min-width: 431px) and (max-width: 620px) {
+    /* CSS for små tablets og store telefoner */
+    .nav-bar{
+        display: none;
+    }
+    
+    h1 {
+        font-family: passion;
+        font-size: 1.62rem;
+        color: var(--white);
+        text-align: center;
+        width: 27rem;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #banner{
+        width: 100%;
+        height: 30vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 20%;
+    }
+
+    #logo{
+        width: 2.5rem;
+        position: fixed;
+        right: 3%;
+        top: 90%;
+        z-index: 20;
+    }
+}
+
+/* Tablets i stående retning (f.eks. iPads, Galaxy Tab) */
+@media screen and (min-width: 621px) and (max-width: 1024px) {
+    /* CSS for almindelige tablets */
+    .nav-bar{
+        display: none;
+    }
+    
+    h1 {
+        font-family: passion;
+        font-size: 2.3rem;
+        color: var(--white);
+        text-align: center;
+        width: 38rem;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #banner{
+        width: 100%;
+        height: 30vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 20%;
+    }
+
+    #logo{
+        width: 3rem;
+        position: fixed;
+        right: 3%;
+        top: 90%;
+        z-index: 20;
+    }
+}
+
+/* Små laptops og store tablets i landskab (f.eks. MacBook Air 13") */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    /* CSS for små laptops */
+    
+    h1 {
+        font-family: passion;
+        font-size: 3rem;
+        color: var(--white);
+        text-align: center;
+        width: 36rem;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #banner{
+        width: 100%;
+        height: 40vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 20%;
+    }
+
+    #logo{
+        width: 3.5rem;
+        position: fixed;
+        right: 3%;
+        top: 90%;
+        z-index: 20;
+    }
+}
+
+/* Almindelige stationære skærme og laptops (f.eks. 1920x1080) */
+@media screen and (min-width: 1281px) and (max-width: 1920px) {
+    /* CSS for stationære computere og store laptops */
+    h1 {
+        font-family: passion;
+        font-size: 4rem;
+        color: var(--white);
+        text-align: center;
+        width: 90rem;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #banner{
+        width: 100%;
+        height: 40vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 25%;
+    }
+
+    #logo{
+        width: 4.5rem;
+        position: fixed;
+        right: 3%;
+        top: 90%;
+        z-index: 20;
+    }
+}
+
+/* Store stationære skærme (f.eks. 4K og ultrawide skærme) */
+@media screen and (min-width: 1921px) {
+    /* CSS for meget store skærme */
+    h1 {
+        font-family: passion;
+        font-size: 5.5rem;
+        color: var(--white);
+        text-align: center;
+        width: 100rem;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #banner{
+        width: 100%;
+        height: 40vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 20%;
+    }
+
+    #logo{
+        width: 5.2rem;
+        position: fixed;
+        right: 3%;
+        top: 90%;
+        z-index: 20;
+    }
+}
