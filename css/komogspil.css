@@ -116,51 +116,39 @@ nav ul.sub-menus a:hover{
 	color: var(--white);
 }
 
-
 body{
     background-color: black;
 }
 
 
-@media screen and (max-width: 375px){
-    
+
+
+/* Smartphones i stående retning (meget små skærme, f.eks. iPhone SE) */
+@media screen and (max-width: 360px) {
+    /* CSS for meget små smartphones */
     .nav-bar{
         display: none;
     }
     
     h1 {
         font-family: passion;
-        font-size: 2.1rem;
-        color: var(--black);
+        font-size: 1.5rem;
+        color: var(--white);
         text-align: center;
-        width: 20rem;
+        width: 16rem;
         position: absolute; /* Gør det muligt at placere teksten oven på billedet */
-        top: 15%; /* Placerer teksten vertikalt i midten */
+        top: 10%; /* Placerer teksten vertikalt i midten */
         left: 50%; /* Placerer teksten horisontalt i midten */
         transform: translate(-50%, -50%); /* Justerer for elementets egen bredde og højde */
         z-index: 1;
     }
 
-    h2{
-        font-family: cairo;
-        font-size: 1.1rem;
-        text-transform: uppercase;
-        width: 17rem;
-        top: 42%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: var(--light-grey);
-        position: absolute;
-        text-align: center;
-        z-index: 10;
-    }
-
     #banner{
         width: 100%;
-        height: 40vh;
+        height: 20vh;
         overflow-x: hidden;
         position: absolute;
-        top: -7%;
+        top: 10%;
     }
 
     #logo{
@@ -171,177 +159,87 @@ body{
         z-index: 20;
     }
 
-    .wrapper{
-        width: 16rem;
-        margin: 0 auto;
-        padding: 1rem;
-        color: var(--light-grey);
-        position: absolute;
-        top: 90%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-family: cairo;
-        text-align: center;
-        background-color: #1d1d1d;
-        border-radius: 2rem;
-    }
-
-    .wrapper h3{
-        padding-bottom: 1rem;
-    }
-
-    .wrapper img{
-        width: 16rem;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 130%;
-    }
-
-    .second-wrapper{
-        width: 16rem;
-        margin: 0 auto;
-        padding: 1rem;
-        color: var(--light-grey);
-        position: absolute;
-        top: 210%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-family: cairo;
-        text-align: center;
-        background-color: #1d1d1d;
-        border-radius: 2rem;
-    }
-
-    .second-wrapper h3{
-        padding-bottom: 1rem;
-    }
-
-    .second-wrapper img{
-        width: 16rem;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 128%;
-    }
-
-}
-
-@media screen and (min-width: 376px) and (max-width: 430px){
-    
-    .nav-bar{
-        display: none;
-    }
-    
-    h1 {
-        font-family: passion;
-        font-size: 2.2rem;
-        color: var(--black);
-        text-align: center;
-        width: 20rem;
-        position: absolute; /* Gør det muligt at placere teksten oven på billedet */
-        top: 15%; /* Placerer teksten vertikalt i midten */
-        left: 50%; /* Placerer teksten horisontalt i midten */
-        transform: translate(-50%, -50%); /* Justerer for elementets egen bredde og højde */
-        z-index: 1;
-    }
-
     h2{
-        font-family: cairo;
-        font-size: 1.05rem;
-        text-transform: uppercase;
-        width: 16rem;
-        top: 42%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         color: var(--light-grey);
         position: absolute;
+        font-size: 1.3rem;
+        width: 14rem;
         text-align: center;
-        z-index: 10;
-    }
-
-    #banner{
-        width: 100%;
-        height: 40vh;
-        overflow-x: hidden;
-        position: absolute;
-        top: -7%;
-    }
-
-    #logo{
-        width: 2.5rem;
-        position: fixed;
-        right: 3%;
-        top: 90%;
-        z-index: 20;
+        font-family: cairo;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 40%;
     }
 
     .wrapper{
-        width: 16rem;
-        margin: 0 auto;
-        padding: 1rem;
+        background-color: #191919;
         color: var(--light-grey);
         position: absolute;
-        top: 85%;
         left: 50%;
         transform: translate(-50%, -50%);
+        top: 75%;
+        width: 16rem;
         font-family: cairo;
+        font-size: 0.9rem;
+        padding: 1rem;
         text-align: center;
-        background-color: #1d1d1d;
-        border-radius: 2rem;
+        border-radius: 25px;
+    }
+
+    .wrapper img{
+        width: 16rem;
+        top: 135%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
     }
 
     .wrapper h3{
         padding-bottom: 1rem;
     }
 
-    .wrapper img{
-        width: 16rem;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 126%;
-    }
-
     .second-wrapper{
-        width: 16rem;
-        margin: 0 auto;
-        padding: 1rem;
+        background-color: #191919;
         color: var(--light-grey);
         position: absolute;
-        top: 175%;
         left: 50%;
         transform: translate(-50%, -50%);
+        top: 170%;
+        width: 16rem;
         font-family: cairo;
+        font-size: 0.9rem;
+        padding: 1rem;
         text-align: center;
-        background-color: #1d1d1d;
-        border-radius: 2rem;
+        border-radius: 25px;
+    }
+
+    .second-wrapper img{
+        width: 16rem;
+        top: 135%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
     }
 
     .second-wrapper h3{
         padding-bottom: 1rem;
     }
 
-    .second-wrapper img{
-        width: 16rem;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 128%;
-    }
 }
 
-@media screen and (max-width: 1024px){
+/* Smartphones i stående retning (typisk, f.eks. iPhone 12, Galaxy S21) */
+@media screen and (min-width: 361px) and (max-width: 430px) {
+    /* CSS for almindelige smartphones */
     .nav-bar{
         display: none;
     }
     
     h1 {
         font-family: passion;
-        font-size: 3.7rem;
-        color: var(--black);
+        font-size: 1.7rem;
+        color: var(--white);
         text-align: center;
-        width: 42rem;
+        width: 22rem;
         position: absolute;
         top: 15%;
         left: 50%;
@@ -349,18 +247,244 @@ body{
         z-index: 1;
     }
 
+    #banner{
+        width: 100%;
+        height: 25vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 15%;
+    }
+
+    #logo{
+        width: 2.5rem;
+        position: fixed;
+        right: 3%;
+        top: 90%;
+        z-index: 20;
+    }
+
     h2{
-        font-family: cairo;
-        font-size: 1.1rem;
-        text-transform: uppercase;
-        width: 17rem;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         color: var(--light-grey);
         position: absolute;
+        font-size: 1.3rem;
+        width: 14rem;
         text-align: center;
-        z-index: 10;
+        font-family: cairo;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 45%;
+    }
+
+    .wrapper{
+        background-color: #191919;
+        color: var(--light-grey);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 80%;
+        width: 16rem;
+        font-family: cairo;
+        font-size: 0.9rem;
+        padding: 1rem;
+        text-align: center;
+        border-radius: 25px;
+    }
+
+    .wrapper img{
+        width: 16rem;
+        top: 135%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+
+    .wrapper h3{
+        padding-bottom: 1rem;
+    }
+
+    .second-wrapper{
+        background-color: #191919;
+        color: var(--light-grey);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 175%;
+        width: 16rem;
+        font-family: cairo;
+        font-size: 0.9rem;
+        padding: 1rem;
+        text-align: center;
+        border-radius: 25px;
+    }
+
+    .second-wrapper img{
+        width: 16rem;
+        top: 135%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+
+    .second-wrapper h3{
+        padding-bottom: 1rem;
+    }
+}
+
+/* Små tablets og store smartphones (f.eks. iPad Mini, Galaxy Fold) */
+@media screen and (min-width: 431px) and (max-width: 620px) {
+    /* CSS for små tablets og store telefoner */
+    .nav-bar{
+        display: none;
+    }
+    
+    h1 {
+        font-family: passion;
+        font-size: 1.62rem;
+        color: var(--white);
+        text-align: center;
+        width: 27rem;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #banner{
+        width: 100%;
+        height: 30vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 20%;
+    }
+
+    #logo{
+        width: 2.5rem;
+        position: fixed;
+        right: 3%;
+        top: 90%;
+        z-index: 20;
+    }
+
+    h2{
+        color: var(--light-grey);
+        position: absolute;
+        font-size: 1.3rem;
+        width: 14rem;
+        text-align: center;
+        font-family: cairo;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 40%;
+    }
+
+    .wrapper{
+        background-color: #191919;
+        color: var(--light-grey);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 75%;
+        width: 16rem;
+        font-family: cairo;
+        font-size: 0.9rem;
+        padding: 1rem;
+        text-align: center;
+        border-radius: 25px;
+    }
+
+    .wrapper img{
+        width: 16rem;
+        top: 135%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+
+    .wrapper h3{
+        padding-bottom: 1rem;
+    }
+
+    .second-wrapper{
+        background-color: #191919;
+        color: var(--light-grey);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 170%;
+        width: 16rem;
+        font-family: cairo;
+        font-size: 0.9rem;
+        padding: 1rem;
+        text-align: center;
+        border-radius: 25px;
+    }
+
+    .second-wrapper img{
+        width: 16rem;
+        top: 135%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+
+    .second-wrapper h3{
+        padding-bottom: 1rem;
+    }
+}
+
+/* Tablets i stående retning (f.eks. iPads, Galaxy Tab) */
+@media screen and (min-width: 621px) and (max-width: 1024px) {
+    /* CSS for almindelige tablets */
+    .nav-bar{
+        display: none;
+    }
+    
+    h1 {
+        font-family: passion;
+        font-size: 2.3rem;
+        color: var(--white);
+        text-align: center;
+        width: 38rem;
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #banner{
+        width: 100%;
+        height: 30vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 20%;
+    }
+
+    #logo{
+        width: 3rem;
+        position: fixed;
+        right: 3%;
+        top: 90%;
+        z-index: 20;
+    }
+}
+
+/* Små laptops og store tablets i landskab (f.eks. MacBook Air 13") */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    /* CSS for små laptops */
+    
+    h1 {
+        font-family: passion;
+        font-size: 3rem;
+        color: var(--white);
+        text-align: center;
+        width: 36rem;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
     }
 
     #banner{
@@ -368,7 +492,7 @@ body{
         height: 40vh;
         overflow-x: hidden;
         position: absolute;
-        top: -7%;
+        top: 20%;
     }
 
     #logo{
@@ -379,187 +503,23 @@ body{
         z-index: 20;
     }
 
-    .wrapper{
-        width: 16rem;
-        margin: 0 auto;
-        padding: 1rem;
-        color: var(--light-grey);
-        position: absolute;
-        top: 60%;
-        left: 6%;
-        font-family: cairo;
-        text-align: center;
-        background-color: #1d1d1d;
-        border-radius: 2rem;
-    }
+    
+}
 
-    .wrapper h3{
-        padding-bottom: 1rem;
-    }
-
-    .wrapper img{
-        width: 16rem;
-        position: absolute;
-        left: 120%;
-        top: 30%;
-    }
-
-    .second-wrapper{
-        width: 16rem;
-        margin: 0 auto;
-        padding: 1rem;
-        color: var(--light-grey);
-        position: absolute;
-        top: 175%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-family: cairo;
-        text-align: center;
-        background-color: #1d1d1d;
-        border-radius: 2rem;
-    }
-
-    .second-wrapper h3{
-        padding-bottom: 1rem;
-    }
-
-    .second-wrapper img{
-        width: 16rem;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 128%;
-    }
-    }
-
-    @media screen and (min-width: 431px) and (max-width: 685px){
-        .nav-bar{
-            display: none;
-        }
-        
-        h1 {
-            font-family: passion;
-            font-size: 3.7rem;
-            color: var(--black);
-            text-align: center;
-            width: 35rem;
-            position: absolute;
-            top: 15%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-        }
-    
-        h2{
-            font-family: cairo;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            width: 17rem;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: var(--light-grey);
-            position: absolute;
-            text-align: center;
-            z-index: 10;
-        }
-    
-        #banner{
-            width: 100%;
-            height: 40vh;
-            overflow-x: hidden;
-            position: absolute;
-            top: -7%;
-        }
-    
-        #logo{
-            width: 3.5rem;
-            position: fixed;
-            right: 3%;
-            top: 90%;
-            z-index: 20;
-        }
-    
-        .wrapper{
-            width: 20rem;
-            margin: 0 auto;
-            padding: 1rem;
-            color: var(--light-grey);
-            position: absolute;
-            top: 60%;
-            left: 6%;
-            font-family: cairo;
-            text-align: center;
-            background-color: #1d1d1d;
-            border-radius: 2rem;
-        }
-    
-        .wrapper h3{
-            padding-bottom: 1rem;
-        }
-    
-        .wrapper img{
-            width: 16rem;
-            position: absolute;
-            left: 106%;
-            top: 0%;
-        }
-    
-        .second-wrapper{
-            width: 16rem;
-            margin: 0 auto;
-            padding: 1rem;
-            color: var(--light-grey);
-            position: absolute;
-            top: 175%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: cairo;
-            text-align: center;
-            background-color: #1d1d1d;
-            border-radius: 2rem;
-        }
-    
-        .second-wrapper h3{
-            padding-bottom: 1rem;
-        }
-    
-        .second-wrapper img{
-            width: 16rem;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            top: 128%;
-        }
-    }
-
-@media screen and (min-width: 1025px){
-    
+/* Almindelige stationære skærme og laptops (f.eks. 1920x1080) */
+@media screen and (min-width: 1281px) and (max-width: 1920px) {
+    /* CSS for stationære computere og store laptops */
     h1 {
         font-family: passion;
-        font-size: 5rem;
+        font-size: 4rem;
         color: var(--white);
         text-align: center;
+        width: 90rem;
         position: absolute;
         top: 25%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
-        width: 50rem;
-    }
-
-    h2{
-        font-family: cairo;
-        font-size: 1.6rem;
-        text-transform: uppercase;
-        width: 23rem;
-        top: 75%;
-        left: 27%;
-        transform: translate(-50%, -50%);
-        color: var(--light-grey);
-        position: absolute;
-        text-align: center;
-        z-index: 10;
     }
 
     #banner{
@@ -567,97 +527,32 @@ body{
         height: 40vh;
         overflow-x: hidden;
         position: absolute;
-        top: 22%;
-        z-index: -1;
+        top: 25%;
     }
 
     #logo{
-        width: 5rem;
+        width: 4.5rem;
         position: fixed;
         right: 3%;
         top: 90%;
         z-index: 20;
-    }
-
-    .wrapper{
-        width: 35rem;
-        margin: 0 auto;
-        padding: 1rem;
-        color: var(--light-grey);
-        position: absolute;
-        top: 90%;
-        left: 6%;
-        height: 17rem;
-        font-family: cairo;
-        text-align: center;
-        background-color: #1d1d1d;
-        border-radius: 2rem;
-    }
-
-    .wrapper h3{
-        padding-bottom: 1rem;
-    }
-
-    .wrapper img{
-        width: 20rem;
-        position: absolute;
-        left: 123%;
-        top: -4%;
-    }
-
-    .second-wrapper{
-        width: 35rem;
-        height: 17rem;
-        margin: 0 auto;
-        padding: 2rem;
-        color: var(--light-grey);
-        position: absolute;
-        top: 140%;
-        right: 6%;
-        font-family: cairo;
-        text-align: center;
-        background-color: #1d1d1d;
-        border-radius: 2rem;
-    }
-
-    .second-wrapper h3{
-        padding-bottom: 1rem;
-    }
-
-    .second-wrapper img{
-        width: 20rem;
-        position: absolute;
-        right: 123%;
-        top: -4%;
     }
 }
 
-@media screen and (min-width: 1366px) and (max-width: 1920px){
-    
+/* Store stationære skærme (f.eks. 4K og ultrawide skærme) */
+@media screen and (min-width: 1921px) {
+    /* CSS for meget store skærme */
     h1 {
         font-family: passion;
-        font-size: 6rem;
+        font-size: 5.5rem;
         color: var(--white);
         text-align: center;
+        width: 100rem;
         position: absolute;
-        top: 25%;
+        top: 20%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
-        width: 60rem;
-    }
-
-    h2{
-        font-family: cairo;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-        width: 53rem;
-        top: 74%;
-        left: 29%;
-        color: var(--light-grey);
-        position: absolute;
-        text-align: center;
-        z-index: 10;
     }
 
     #banner{
@@ -665,187 +560,14 @@ body{
         height: 40vh;
         overflow-x: hidden;
         position: absolute;
-        top: 25%;
-        z-index: -1;
+        top: 20%;
     }
 
     #logo{
-        width: 5rem;
+        width: 5.2rem;
         position: fixed;
         right: 3%;
         top: 90%;
         z-index: 20;
-    }
-
-    .wrapper{
-        width: 50rem;
-        height: 23rem;
-        margin: 0 auto;
-        padding: 2rem;
-        color: var(--light-grey);
-        position: absolute;
-        top: 84%;
-        left: 6%;
-        font-family: cairo;
-        text-align: center;
-        background-color: #1d1d1d;
-        border-radius: 2rem;
-    }
-
-    .wrapper h3{
-        padding-bottom: 1rem;
-    }
-
-    .wrapper img{
-        width: 25rem;
-        position: absolute;
-        left: 108%;
-        top: -4%;
-    }
-
-    .second-wrapper{
-        width: 50rem;
-        height: 23rem;
-        margin: 0 auto;
-        padding: 2rem;
-        color: var(--light-grey);
-        position: absolute;
-        top: 140%;
-        right: 6%;
-        font-family: cairo;
-        text-align: center;
-        background-color: #1d1d1d;
-        border-radius: 2rem;
-    }
-
-    .second-wrapper h3{
-        padding-bottom: 1rem;
-    }
-
-    .second-wrapper img{
-        width: 25rem;
-        position: absolute;
-        right: 108%;
-        top: -4%;
-    }
-
-    header nav ul li a{         
-        text-decoration: none;
-        font-size: 1.5rem;
-        padding: 1.5rem;
-        color: var(--white);
-        display: block;
-        background: var(--black);
-    }
-   
-    nav ul.sub-menus a {
-        color: var(--orange);
-        font-size: 1.3rem;
-    }
-
-}
-
-@media screen and (min-width: 1921px) and (max-width: 2560px){
-    
-    h1 {
-        font-family: passion;
-        font-size: 6rem;
-        color: var(--white);
-        text-align: center;
-        position: absolute;
-        top: 15%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-    }
-
-    h2{
-        font-family: cairo;
-        font-size: 1.1rem;
-        text-transform: uppercase;
-        width: 17rem;
-        top: 42%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: var(--light-grey);
-        position: absolute;
-        text-align: center;
-        z-index: 10;
-    }
-
-    #banner{
-        width: 100%;
-        height: 40vh;
-        overflow-x: hidden;
-        position: absolute;
-        top: -7%;
-        z-index: -1;
-    }
-
-    #logo{
-        width: 7rem;
-        position: fixed;
-        right: 3%;
-        top: 90%;
-        z-index: 20;
-    }
-
-    .wrapper{
-        width: 16rem;
-        margin: 0 auto;
-        padding: 1rem;
-        color: var(--light-grey);
-        position: absolute;
-        top: 90%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-family: cairo;
-        text-align: center;
-        background-color: #1d1d1d;
-        border-radius: 2rem;
-    }
-
-    .wrapper h3{
-        padding-bottom: 1rem;
-    }
-
-    .second-wrapper{
-        width: 50rem;
-        height: 23rem;
-        margin: 0 auto;
-        padding: 2rem;
-        color: var(--light-grey);
-        position: absolute;
-        top: 140%;
-        right: 6%;
-        font-family: cairo;
-        text-align: center;
-        background-color: #1d1d1d;
-        border-radius: 2rem;
-    }
-
-    .second-wrapper h3{
-        padding-bottom: 1rem;
-    }
-
-    .second-wrapper img{
-        width: 25rem;
-        position: absolute;
-        right: 108%;
-        top: -4%;
-    }
-
-    header nav ul li a{         
-        text-decoration: none;
-        font-size: 1.8rem;
-        padding: 1.5rem;
-        color: var(--white);
-        display: block;
-        background: var(--black);
-    }
-  
-    nav ul.sub-menus a {
-        color: var(--orange);
-        font-size: 1.5rem;
     }
 }
