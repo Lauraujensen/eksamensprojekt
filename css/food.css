@@ -305,7 +305,7 @@ body{
     #tilbage{
         width: 1.5rem;
         position: absolute;
-        top: 40%;
+        top: 51%;
         z-index: 10;
         left: 5%;
         transform: translate(-5%, -5%);
@@ -316,7 +316,7 @@ body{
         font-size: 0.8rem;
         font-family: cairo;
         position: absolute;
-        top: 40%;
+        top: 51%;
         left: 9.5%;
         transform: translate(-11%, -11%);
     }
