@@ -468,7 +468,7 @@ body{
     /* CSS for stationære computere og store laptops */
     h1 {
         font-family: passion;
-        font-size: 5rem;
+        font-size: 4.6rem;
         color: var(--white);
         text-align: center;
         width: 65rem;
@@ -533,10 +533,10 @@ body{
     /* CSS for meget store skærme */
     h1 {
         font-family: passion;
-        font-size: 5.5rem;
+        font-size: 5rem;
         color: var(--white);
         text-align: center;
-        width: 42rem;
+        width: 80rem;
         position: absolute;
         top: 20%;
         left: 50%;

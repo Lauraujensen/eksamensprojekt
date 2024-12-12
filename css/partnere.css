@@ -471,7 +471,7 @@ body{
         font-size: 5rem;
         color: var(--white);
         text-align: center;
-        width: 65rem;
+        width: 68rem;
         position: absolute;
         top: 25%;
         left: 50%;
@@ -533,10 +533,10 @@ body{
     /* CSS for meget store skærme */
     h1 {
         font-family: passion;
-        font-size: 5.5rem;
+        font-size: 5rem;
         color: var(--white);
         text-align: center;
-        width: 42rem;
+        width: 80rem;
         position: absolute;
         top: 20%;
         left: 50%;
