@@ -121,6 +121,13 @@ body{
 }
 
 
+  #tilbage-text {
+    transition: transform 0.3s ease, 0.3s ease;
+  }
+  
+  #tilbage-text:hover{
+    font-weight: bolder;
+}
 
 
 /* Smartphones i stående retning (meget små skærme, f.eks. iPhone SE) */
@@ -135,7 +142,7 @@ body{
         font-size: 1.5rem;
         color: var(--white);
         text-align: center;
-        width: 16rem;
+        width: 22rem;
         position: absolute; /* Gør det muligt at placere teksten oven på billedet */
         top: 10%; /* Placerer teksten vertikalt i midten */
         left: 50%; /* Placerer teksten horisontalt i midten */
@@ -159,72 +166,34 @@ body{
         z-index: 20;
     }
 
-    h2{
-        color: var(--light-grey);
-        position: absolute;
-        font-size: 1.3rem;
-        width: 14rem;
-        text-align: center;
-        font-family: cairo;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 40%;
-    }
-
     .wrapper{
-        background-color: #191919;
-        color: var(--light-grey);
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 75%;
-        width: 16rem;
+        color: var(--white);
         font-family: cairo;
         font-size: 0.9rem;
-        padding: 1rem;
+        width: 18rem;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         text-align: center;
-        border-radius: 25px;
     }
 
-    .wrapper img{
-        width: 16rem;
-        top: 135%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    #tilbage{
+        width: 1rem;
         position: absolute;
+        top: 30%;
+        z-index: 10;
+        left: 5%;
     }
 
-    .wrapper h3{
-        padding-bottom: 1rem;
-    }
-
-    .second-wrapper{
-        background-color: #191919;
-        color: var(--light-grey);
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 170%;
-        width: 16rem;
+    #tilbage-text{
+        color: var(--white);
+        font-size: 0.5rem;
         font-family: cairo;
-        font-size: 0.9rem;
-        padding: 1rem;
-        text-align: center;
-        border-radius: 25px;
-    }
-
-    .second-wrapper img{
-        width: 16rem;
-        top: 135%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         position: absolute;
+        top: 30%;
+        left: 10%;
     }
-
-    .second-wrapper h3{
-        padding-bottom: 1rem;
-    }
-
 }
 
 /* Smartphones i stående retning (typisk, f.eks. iPhone 12, Galaxy S21) */
@@ -236,12 +205,12 @@ body{
     
     h1 {
         font-family: passion;
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         color: var(--white);
         text-align: center;
         width: 22rem;
         position: absolute;
-        top: 15%;
+        top: 10%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
@@ -249,10 +218,10 @@ body{
 
     #banner{
         width: 100%;
-        height: 25vh;
+        height: 20vh;
         overflow-x: hidden;
         position: absolute;
-        top: 15%;
+        top: 10%;
     }
 
     #logo{
@@ -263,70 +232,33 @@ body{
         z-index: 20;
     }
 
-    h2{
-        color: var(--light-grey);
-        position: absolute;
-        font-size: 1.3rem;
-        width: 14rem;
-        text-align: center;
-        font-family: cairo;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 45%;
-    }
-
     .wrapper{
-        background-color: #191919;
-        color: var(--light-grey);
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 80%;
-        width: 16rem;
+        color: var(--white);
         font-family: cairo;
         font-size: 0.9rem;
-        padding: 1rem;
+        width: 18rem;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         text-align: center;
-        border-radius: 25px;
     }
 
-    .wrapper img{
-        width: 16rem;
-        top: 135%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    #tilbage{
+        width: 1rem;
         position: absolute;
+        top: 30%;
+        z-index: 10;
+        left: 5%;
     }
 
-    .wrapper h3{
-        padding-bottom: 1rem;
-    }
-
-    .second-wrapper{
-        background-color: #191919;
-        color: var(--light-grey);
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 175%;
-        width: 16rem;
+    #tilbage-text{
+        color: var(--white);
+        font-size: 0.5rem;
         font-family: cairo;
-        font-size: 0.9rem;
-        padding: 1rem;
-        text-align: center;
-        border-radius: 25px;
-    }
-
-    .second-wrapper img{
-        width: 16rem;
-        top: 135%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         position: absolute;
-    }
-
-    .second-wrapper h3{
-        padding-bottom: 1rem;
+        top: 30%;
+        left: 10%;
     }
 }
 
@@ -339,12 +271,12 @@ body{
     
     h1 {
         font-family: passion;
-        font-size: 1.62rem;
+        font-size: 1.9rem;
         color: var(--white);
         text-align: center;
-        width: 27rem;
+        width: 26rem;
         position: absolute;
-        top: 15%;
+        top: 10%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
@@ -355,81 +287,46 @@ body{
         height: 30vh;
         overflow-x: hidden;
         position: absolute;
-        top: 20%;
+        top: 10%;
     }
 
     #logo{
-        width: 2.5rem;
+        width: 2.8rem;
         position: fixed;
         right: 3%;
         top: 90%;
         z-index: 20;
     }
 
-    h2{
-        color: var(--light-grey);
-        position: absolute;
-        font-size: 1.3rem;
-        width: 14rem;
-        text-align: center;
-        font-family: cairo;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 40%;
-    }
-
     .wrapper{
-        background-color: #191919;
-        color: var(--light-grey);
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 75%;
-        width: 16rem;
+        color: var(--white);
         font-family: cairo;
-        font-size: 0.9rem;
-        padding: 1rem;
+        font-size: 1rem;
+        width: 22rem;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         text-align: center;
-        border-radius: 25px;
     }
 
-    .wrapper img{
-        width: 16rem;
-        top: 135%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    #tilbage{
+        width: 1.5rem;
         position: absolute;
+        top: 40%;
+        z-index: 10;
+        left: 5%;
+        transform: translate(-5%, -5%);
     }
 
-    .wrapper h3{
-        padding-bottom: 1rem;
-    }
-
-    .second-wrapper{
-        background-color: #191919;
-        color: var(--light-grey);
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 170%;
-        width: 16rem;
+    #tilbage-text{
+        color: var(--white);
+        font-size: 0.8rem;
         font-family: cairo;
-        font-size: 0.9rem;
-        padding: 1rem;
-        text-align: center;
-        border-radius: 25px;
-    }
-
-    .second-wrapper img{
-        width: 16rem;
-        top: 135%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         position: absolute;
-    }
-
-    .second-wrapper h3{
-        padding-bottom: 1rem;
+        top: 40%;
+        left: 11%;
+        transform: translate(-11%, -11%);
     }
 }
 
@@ -442,12 +339,12 @@ body{
     
     h1 {
         font-family: passion;
-        font-size: 2.3rem;
+        font-size: 2.5rem;
         color: var(--white);
         text-align: center;
-        width: 38rem;
+        width: 35rem;
         position: absolute;
-        top: 15%;
+        top: 10%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
@@ -458,15 +355,46 @@ body{
         height: 30vh;
         overflow-x: hidden;
         position: absolute;
-        top: 20%;
+        top: 10%;
     }
 
     #logo{
-        width: 3rem;
+        width: 3.2rem;
         position: fixed;
         right: 3%;
         top: 90%;
         z-index: 20;
+    }
+
+    .wrapper{
+        color: var(--white);
+        font-family: cairo;
+        font-size: 1.2rem;
+        width: 30rem;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    #tilbage{
+        width: 1.5rem;
+        position: absolute;
+        top: 40%;
+        z-index: 10;
+        left: 5%;
+        transform: translate(-5%, -5%);
+    }
+
+    #tilbage-text{
+        color: var(--white);
+        font-size: 0.8rem;
+        font-family: cairo;
+        position: absolute;
+        top: 40%;
+        left: 9.5%;
+        transform: translate(-11%, -11%);
     }
 }
 
@@ -503,7 +431,36 @@ body{
         z-index: 20;
     }
 
-    
+    .wrapper{
+        color: var(--white);
+        font-family: cairo;
+        font-size: 1.3rem;
+        width: 35rem;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    #tilbage{
+        width: 1.5rem;
+        position: absolute;
+        top: 40%;
+        z-index: 10;
+        left: 5%;
+        transform: translate(-5%, -5%);
+    }
+
+    #tilbage-text{
+        color: var(--white);
+        font-size: 0.8rem;
+        font-family: cairo;
+        position: absolute;
+        top: 40%;
+        left: 9.5%;
+        transform: translate(-11%, -11%);
+    }
 }
 
 /* Almindelige stationære skærme og laptops (f.eks. 1920x1080) */
@@ -511,10 +468,10 @@ body{
     /* CSS for stationære computere og store laptops */
     h1 {
         font-family: passion;
-        font-size: 4rem;
+        font-size: 5rem;
         color: var(--white);
         text-align: center;
-        width: 90rem;
+        width: 65rem;
         position: absolute;
         top: 25%;
         left: 50%;
@@ -537,6 +494,38 @@ body{
         top: 90%;
         z-index: 20;
     }
+
+    .wrapper{
+        color: var(--white);
+        font-family: cairo;
+        font-size: 1.3rem;
+        width: 50rem;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding-bottom: 6rem;
+    }
+
+    #tilbage{
+        width: 1.5rem;
+        position: absolute;
+        top: 65%;
+        z-index: 10;
+        left: 5%;
+        transform: translate(-5%, -5%);
+    }
+
+    #tilbage-text{
+        color: var(--white);
+        font-size: 1rem;
+        font-family: cairo;
+        position: absolute;
+        top: 65%;
+        left: 7.3%;
+        transform: translate(-11%, -11%);
+    }
 }
 
 /* Store stationære skærme (f.eks. 4K og ultrawide skærme) */
@@ -547,7 +536,7 @@ body{
         font-size: 5.5rem;
         color: var(--white);
         text-align: center;
-        width: 100rem;
+        width: 42rem;
         position: absolute;
         top: 20%;
         left: 50%;
@@ -570,4 +559,37 @@ body{
         top: 90%;
         z-index: 20;
     }
+
+    .wrapper{
+        color: var(--white);
+        font-family: cairo;
+        font-size: 1.4rem;
+        width: 60rem;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding-bottom: 6rem;
+    }
+
+    #tilbage{
+        width: 1.6rem;
+        position: absolute;
+        top: 65%;
+        z-index: 10;
+        left: 5%;
+        transform: translate(-5%, -5%);
+    }
+
+    #tilbage-text{
+        color: var(--white);
+        font-size: 1rem;
+        font-family: cairo;
+        position: absolute;
+        top: 65%;
+        left: 7.5%;
+        transform: translate(-11%, -11%);
+    }
+    
 }
