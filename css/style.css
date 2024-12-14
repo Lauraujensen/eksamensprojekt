@@ -581,3 +581,8 @@ body{
     justify-content: space-between; /* Eller 'flex-start' eller 'center' baseret på ønsket layout */
     align-items: center;
 }
+
+.artist .price{
+    color:#4f3e5b;
+    font-weight: 700;
+}
