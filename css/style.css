@@ -179,8 +179,55 @@ body{
         border-radius: 25px;
     }
 
-    .grid-container{
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    .artist{
+        flex: 1 1 100%; /* På mindre skærme fylder hver artist 100% */;
+        display: flex;
+        flex-direction: column;
+        max-width: 35rem;
+        border: 4px solid var(--purple);
+        border-radius: 25px;
+        overflow: hidden;
+        background-color: #000000;
+        transition: ease 0.3s;
+        margin: 0;
+    }
+       
+    .artist-content{
+        padding: 2rem;
+        color: var(--white);
+    }
+    
+    .artist-content h3{
+        font-family: bebas;
+        font-size: 2.8rem;
+        margin-bottom: 5px;
+    }
+    
+    .artist-content p{
+        font-family: cairo;
+        color: var(--white);
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        margin-bottom: 2rem;
+    }
+    
+    .artist-content .date{
+        display:inline-block;
+        border: 2px solid var(--white);
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 2.1rem;
+        font-size: 1.3rem;
+    }
+
+    .artist-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+        gap: 60px;
+        align-items: stretch; /* Sørger for, at alle artist-elementer får samme højde */
+        transform: translateY(55rem); /* Flytter containeren nedad */
     }
 }
 
@@ -230,6 +277,56 @@ body{
         border-radius: 25px;
     }
 
+    .artist{
+        flex: 1 1 100%; /* På mindre skærme fylder hver artist 100% */;
+        display: flex;
+        flex-direction: column;
+        max-width: 35rem;
+        border: 4px solid var(--purple);
+        border-radius: 25px;
+        overflow: hidden;
+        background-color: #000000;
+        transition: ease 0.3s;
+        margin: 0;
+    }
+       
+    .artist-content{
+        padding: 2rem;
+        color: var(--white);
+    }
+    
+    .artist-content h3{
+        font-family: bebas;
+        font-size: 2.8rem;
+        margin-bottom: 5px;
+    }
+    
+    .artist-content p{
+        font-family: cairo;
+        color: var(--white);
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        margin-bottom: 2rem;
+    }
+    
+    .artist-content .date{
+        display:inline-block;
+        border: 2px solid var(--white);
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 2.1rem;
+        font-size: 1.3rem;
+    }
+
+    .artist-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+        gap: 60px;
+        align-items: stretch; /* Sørger for, at alle artist-elementer får samme højde */
+        transform: translateY(58rem); /* Flytter containeren nedad */
+    }
 }
 
 @media screen and (min-width: 431px) and (max-width: 620px){
@@ -277,6 +374,58 @@ body{
         padding: 2.5rem;
         border-radius: 25px;
     }
+
+    .artist{
+        flex: 1 1 100%; /* På mindre skærme fylder hver artist 100% */;
+        display: flex;
+        flex-direction: column;
+        max-width: 35rem;
+        min-width: 20rem;
+        border: 4px solid var(--purple);
+        border-radius: 25px;
+        overflow: hidden;
+        background-color: #000000;
+        transition: ease 0.3s;
+        margin: 0;
+    }
+       
+    .artist-content{
+        padding: 2rem;
+        color: var(--white);
+    }
+    
+    .artist-content h3{
+        font-family: bebas;
+        font-size: 2.8rem;
+        margin-bottom: 5px;
+    }
+    
+    .artist-content p{
+        font-family: cairo;
+        color: var(--white);
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        margin-bottom: 2rem;
+    }
+    
+    .artist-content .date{
+        display:inline-block;
+        border: 2px solid var(--white);
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 2.1rem;
+        font-size: 1.3rem;
+    }
+
+    .artist-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+        gap: 60px;
+        align-items: stretch; /* Sørger for, at alle artist-elementer får samme højde */
+        transform: translateY(50rem); /* Flytter containeren nedad */
+    }
 }
 
 @media screen and (min-width: 621px) and (max-width: 1024px) {
@@ -315,16 +464,68 @@ body{
     #introduction{
         position: absolute;
         color: var(--light-grey);
-        top: 75%;
+        top: 80%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 1rem;
-        width: 38rem;
+        font-size: 1.3rem;
+        width: 40rem;
         line-height: 2rem;
         font-family: roboto;
         text-align: center;
         padding: 2.5rem;
         border-radius: 25px;
+    }
+
+    .artist{
+        flex: 1 1 calc(50% - 40px);
+        display: flex;
+        flex-direction: column;
+        max-width: 35rem;
+        min-width: 24rem;
+        border: 4px solid var(--purple);
+        border-radius: 25px;
+        overflow: hidden;
+        background-color: #000000;
+        transition: ease 0.3s;
+        margin: 0rem;
+    }
+       
+    .artist-content{
+        padding: 2rem;
+        color: var(--white);
+    }
+    
+    .artist-content h3{
+        font-family: bebas;
+        font-size: 2.8rem;
+        margin-bottom: 5px;
+    }
+    
+    .artist-content p{
+        font-family: cairo;
+        color: var(--white);
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        margin-bottom: 2rem;
+    }
+    
+    .artist-content .date{
+        display:inline-block;
+        border: 2px solid var(--white);
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 2.1rem;
+        font-size: 1.3rem;
+    }
+
+    .artist-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+        gap: 60px;
+        align-items: stretch; /* Sørger for, at alle artist-elementer får samme højde */
+        transform: translateY(50rem); /* Flytter containeren nedad */
     }
 }
 
@@ -368,6 +569,58 @@ body{
         text-align: center;
         padding: 2.5rem;
         border-radius: 25px;
+    }
+
+
+    .artist{
+        flex: 1 1 calc(50% - 40px);
+        display: flex;
+        flex-direction: column;
+        max-width: 35rem;
+        border: 4px solid var(--purple);
+        border-radius: 25px;
+        overflow: hidden;
+        background-color: #000000;
+        transition: ease 0.3s;
+        margin: 0;
+    }
+       
+    .artist-content{
+        padding: 2rem;
+        color: var(--white);
+    }
+    
+    .artist-content h3{
+        font-family: bebas;
+        font-size: 2.8rem;
+        margin-bottom: 5px;
+    }
+    
+    .artist-content p{
+        font-family: cairo;
+        color: var(--white);
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        margin-bottom: 2rem;
+    }
+    
+    .artist-content .date{
+        display:inline-block;
+        border: 2px solid var(--white);
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 2.1rem;
+        font-size: 1.3rem;
+    }
+
+    .artist-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+        gap: 60px;
+        align-items: stretch; /* Sørger for, at alle artist-elementer får samme højde */
+        transform: translateY(70rem); /* Flytter containeren nedad */
     }
 }
 
@@ -429,6 +682,57 @@ body{
         color: var(--orange);
         font-size: 1.3rem;
     }
+
+    .artist{
+        flex: 1 1 calc(50% - 40px);
+        display: flex;
+        flex-direction: column;
+        max-width: 35rem;
+        border: 4px solid var(--purple);
+        border-radius: 25px;
+        overflow: hidden;
+        background-color: #000000;
+        transition: ease 0.3s;
+        margin: 0;
+    }
+       
+    .artist-content{
+        padding: 2rem;
+        color: var(--white);
+    }
+    
+    .artist-content h3{
+        font-family: bebas;
+        font-size: 2.8rem;
+        margin-bottom: 5px;
+    }
+    
+    .artist-content p{
+        font-family: cairo;
+        color: var(--white);
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        margin-bottom: 2rem;
+    }
+    
+    .artist-content .date{
+        display:inline-block;
+        border: 2px solid var(--white);
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 2.1rem;
+        font-size: 1.3rem;
+    }
+
+    .artist-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+        gap: 60px;
+        align-items: stretch; /* Sørger for, at alle artist-elementer får samme højde */
+        transform: translateY(70rem); /* Flytter containeren nedad */
+    }
 }
 
 @media screen and (min-width: 1921px) {
@@ -487,29 +791,63 @@ body{
         color: var(--orange);
         font-size: 1.5rem;
     }
+    
+    .artist{
+        flex: 1 1 calc(50% - 40px);
+        display: flex;
+        flex-direction: column;
+        max-width: 35rem;
+        border: 4px solid var(--purple);
+        border-radius: 25px;
+        overflow: hidden;
+        background-color: #000000;
+        transition: ease 0.3s;
+        margin: 0;
+    }
+       
+    .artist-content{
+        padding: 2rem;
+        color: var(--white);
+    }
+    
+    .artist-content h3{
+        font-family: bebas;
+        font-size: 2.8rem;
+        margin-bottom: 5px;
+    }
+    
+    .artist-content p{
+        font-family: cairo;
+        color: var(--white);
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        margin-bottom: 2rem;
+    }
+    
+    .artist-content .date{
+        display:inline-block;
+        border: 2px solid var(--white);
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 2.1rem;
+        font-size: 1.3rem;
+    }
+
+    .artist-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5rem;
+        gap: 60px;
+        align-items: stretch; /* Sørger for, at alle artist-elementer får samme højde */
+        transform: translateY(70rem); /* Flytter containeren nedad */
+    }
 }
 
-.artist-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 5rem;
-    gap: 60px;
-    align-items: stretch; /* Sørger for, at alle artist-elementer får samme højde */
-    transform: translateY(70rem); /* Flytter containeren nedad */
-}
-
-.artist{
-    flex: 1 1 calc(50% - 40px);
-    display: flex;
-    flex-direction: column;
-    max-width: 35rem;
-    border: 4px solid var(--purple);
-    border-radius: 25px;
-    overflow: hidden;
-    background-color: #000000;
-    transition: ease 0.3s;
-    margin: 0;
+.artist-content .genre{
+    color: #62506e;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .artist:hover{
@@ -520,40 +858,6 @@ body{
 .artist img{
     width: 100%;
     height: auto;
-}
-
-.artist-content{
-    padding: 2rem;
-    color: var(--white);
-}
-
-.artist-content h3{
-    font-family: bebas;
-    font-size: 2.8rem;
-    margin-bottom: 5px;
-}
-
-.artist-content p{
-    font-family: cairo;
-    color: var(--white);
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-    margin-bottom: 2rem;
-}
-
-.artist-content .genre{
-    color: #62506e;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.artist-content .date{
-    display:inline-block;
-    border: 2px solid var(--white);
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 2.1rem;
-    font-size: 1.3rem;
 }
 
 .artist-content .read{
@@ -585,4 +889,31 @@ body{
 .artist .price{
     color:#4f3e5b;
     font-weight: 700;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+}
+
+#banner-01{
+    position: absolute;
+    top: 170%;
+}
+
+#banner-02{
+    position: absolute;
+    top: 430%;
+}
+
+#banner-03{
+    position: absolute;
+    top: 720%;
+}
+
+#banner-04{
+    position: absolute;
+    top: 1020%;
 }
