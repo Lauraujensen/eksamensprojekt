@@ -725,3 +725,41 @@ body{
 .wrapper-04 a:hover{
     color:#796585
 }
+
+footer {                            /*Styling for footer*/
+    background-color:var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 1.25rem;
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: absolute;
+    top: 300%;
+    font-family: cairo;
+}
+
+footer nav ul {                     /*Styling footers navigationsbar*/
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer nav ul li {                  /*Styling for list items under footer navigationsbar*/
+    display: inline-block; 
+    margin-right: 1rem; 
+}
+
+footer nav ul li:last-child {       /* Fjerne margin for den sidste list item i footer*/
+    margin-right: 0;
+}
+
+footer nav ul li a {                /* Style for links i footer navigationsbar */
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 700;
+}
