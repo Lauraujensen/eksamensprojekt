@@ -27,94 +27,78 @@
     --purple: #361f45;
 }
 
-header .nav-bar{
-    background-color: black;
-    color: white;
-    font-family: bebas;
-}
-
-header nav ul{                  /*Styling af navigationsbar*/
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-
-header nav ul li{               /*Definerer position af navigationsbar listitem*/
+header{
     position: relative;
-    padding: 0;
-}
-
-header nav ul li a{             /*Styling af links i navigationsbar*/
+    top: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    font-family: bebas;
+    z-index: 10;
+ }
+ 
+ header .navbar ul{
+    list-style: none;
+ }
+ 
+ /* Styling af menupunkter */
+ header .navbar ul li{
+    position: relative;
+    float: left;
+    padding-left: 4rem;
+ }
+ 
+ header .navbar ul li a {
     text-decoration: none;
-    font-size: 1.55rem;
-    padding: 1.5rem;
-    color: var(--white);
+    font-size: 1.5rem;
+    padding: 1.2rem;
+    color: white;;
     display: block;
-    background: var(--black);
-}
-
-nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
-    background: var(--purple);
+ 
+ }
+ 
+ /* Hover-effekt på menulinks */
+ header .navbar ul li a:hover{
+    background:#23112f;
     color: var(--white);
-}
-
-nav ul li ul{            /*Styling af dropdown menu i navbar*/
+ }
+ 
+ /* Dropdown-menu */
+ header .navbar ul li ul{
     position: absolute;
     left: 0;
-    width: 100%;                    /*Definerer at den skal udfylde hele siden*/
-    background: var(--orange);
+    min-width: 100%;
     display: none;
-    z-index: 10;                    /*Styrer stablingrækkefølge højere værdi ligger øverst, i dette tilfælde ligger alt under ul øverst for alle andre elementer*/
-}
-
-nav ul li ul li{         /*Styling af list item i dropdown menu*/
+    z-index: 10;
+ }
+ 
+ header .navbar ul li ul li{
     width: 100%;
-    border-top: 0.5px solid var(--black);
-}
-
-nav ul li ul li ul{      /*Styling af nested dropdown menu*/
-    left: 12.5rem;
-    top: 0;
-}
-
-nav ul li:focus-within > ul,
-nav ul li:hover > ul{     /*Definerer display af dropdown menu på hover eller fokus*/
+    padding: 0;
+    background-color:var(--black);
+ }
+ 
+ header .navbar ul li:focus-within > ul,
+ header .navbar ul li:hover > ul{
     display: block;
-    z-index: 10;                     /*Styrer stablingrækkefølge højere værdi ligger øverst, i dette tilfælde ligger alt under ul øverst for alle andre elementer*/
-}
-
-header::after {                     /*Fjern floats efter header content*/
-    content: "";
-    display: table;
-    clear: both;
-}
-
-nav ul.sub-menus{
-	height: auto;
-	overflow: hidden;
-	width: 170px;
-	background: var(--purple);
-	position: absolute;
-	z-index: 10;
-	display: none;
-}
-nav ul.sub-menus li {
-	display: block;
-	text-align: left;
-	width: 100%;
-}
-nav ul.sub-menus a {
-	color: var(--orange);
-	font-size: 1.25rem;
-}
-nav li:hover ul.sub-menus {
-	display: block
-}
-nav ul.sub-menus a:hover{
-	background: var(--purple);
-	color: var(--white);
-}
+ }
+ 
+ /* Skjuler menu-ikonet som standard */
+ #menu-bar{
+    display: none;
+ }
+ 
+ header label{
+    font-size: 1rem;
+    color: #ffffff;
+    cursor: pointer;
+    display: none;
+ }
 
 body{
     background-color: black;
@@ -132,10 +116,55 @@ body{
 
 /* Smartphones i stående retning (meget små skærme, f.eks. iPhone SE) */
 @media screen and (max-width: 360px) {
-    /* CSS for meget små smartphones */
-    .nav-bar{
+
+    /* Burgermenu */ 
+    header{
+        padding: 20px;
+        display: flex;
+         flex-direction: row-reverse;
+         z-index: 1000;
+         height: 2rem;
+         opacity: 80%;
+         position: relative;
+     }
+     
+     header label{
+        display: block;
+     }
+     
+     header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: 1px rgba(0,0,0,0.1);
         display: none;
-    }
+     }
+     
+     header .navbar ul li{
+        position: relative; /* Sørger for, at dropdown-menuerne er relateret til menupunkterne */
+        width: 70%;
+        background-color: black;
+     }
+     
+     header .navbar ul li ul{
+        position: absolute;
+        top: 100%; /* Sørg for, at dropdown-menuen starter under det parent menupunkt */
+        left: 0;
+        min-width: 100%; /* Dropdown bliver lige så bred som parent menupunktet */
+        display: none; /* Skjuler dropdown-menuen som standard */
+        background-color: black;
+        z-index: 1000; /* Sørger for, at dropdown-menuen ikke overlapper med andre elementer */
+     }
+
+     header .navbar ul li ul li ul{
+        position: absolute;
+        left: 0;
+     }
+     
+     #menu-bar:checked ~ .navbar{
+        display: block;
+     }
     
     h1 {
         font-family: passion;
@@ -198,11 +227,55 @@ body{
 
 /* Smartphones i stående retning (typisk, f.eks. iPhone 12, Galaxy S21) */
 @media screen and (min-width: 361px) and (max-width: 430px) {
-    /* CSS for almindelige smartphones */
-    .nav-bar{
+    /* Burgermenu */ 
+    header{
+        padding: 20px;
+        display: flex;
+         flex-direction: row-reverse;
+         z-index: 1000;
+         height: 2rem;
+         opacity: 80%;
+         position: relative;
+     }
+     
+     header label{
+        display: block;
+     }
+     
+     header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: 1px rgba(0,0,0,0.1);
         display: none;
-    }
-    
+     }
+     
+     header .navbar ul li{
+        position: relative; /* Sørger for, at dropdown-menuerne er relateret til menupunkterne */
+        width: 70%;
+        background-color: black;
+     }
+     
+     header .navbar ul li ul{
+        position: absolute;
+        top: 100%; /* Sørg for, at dropdown-menuen starter under det parent menupunkt */
+        left: 0;
+        min-width: 100%; /* Dropdown bliver lige så bred som parent menupunktet */
+        display: none; /* Skjuler dropdown-menuen som standard */
+        background-color: black;
+        z-index: 1000; /* Sørger for, at dropdown-menuen ikke overlapper med andre elementer */
+     }
+
+     header .navbar ul li ul li ul{
+        position: absolute;
+        left: 0;
+     }
+     
+     #menu-bar:checked ~ .navbar{
+        display: block;
+     }
+
     h1 {
         font-family: passion;
         font-size: 1.6rem;
@@ -264,11 +337,56 @@ body{
 
 /* Små tablets og store smartphones (f.eks. iPad Mini, Galaxy Fold) */
 @media screen and (min-width: 431px) and (max-width: 620px) {
-    /* CSS for små tablets og store telefoner */
-    .nav-bar{
+ 
+    /* Burgermenu */ 
+    header{
+        padding: 20px;
+        display: flex;
+         flex-direction: row-reverse;
+         z-index: 1000;
+         height: 2rem;
+         opacity: 80%;
+         position: relative;
+     }
+     
+     header label{
+        display: block;
+     }
+     
+     header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: 1px rgba(0,0,0,0.1);
         display: none;
-    }
-    
+     }
+     
+     header .navbar ul li{
+        position: relative; /* Sørger for, at dropdown-menuerne er relateret til menupunkterne */
+        width: 70%;
+        background-color: black;
+     }
+     
+     header .navbar ul li ul{
+        position: absolute;
+        top: 100%; /* Sørg for, at dropdown-menuen starter under det parent menupunkt */
+        left: 0;
+        min-width: 100%; /* Dropdown bliver lige så bred som parent menupunktet */
+        display: none; /* Skjuler dropdown-menuen som standard */
+        background-color: black;
+        z-index: 1000; /* Sørger for, at dropdown-menuen ikke overlapper med andre elementer */
+     }
+
+     header .navbar ul li ul li ul{
+        position: absolute;
+        left: 0;
+     }
+     
+     #menu-bar:checked ~ .navbar{
+        display: block;
+     }
+
     h1 {
         font-family: passion;
         font-size: 1.9rem;
@@ -333,10 +451,55 @@ body{
 /* Tablets i stående retning (f.eks. iPads, Galaxy Tab) */
 @media screen and (min-width: 621px) and (max-width: 1024px) {
     /* CSS for almindelige tablets */
-    .nav-bar{
+    /* Burgermenu */ 
+    header{
+        padding: 20px;
+        display: flex;
+         flex-direction: row-reverse;
+         z-index: 1000;
+         height: 2rem;
+         opacity: 80%;
+         position: relative;
+     }
+     
+     header label{
+        display: block;
+     }
+     
+     header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: 1px rgba(0,0,0,0.1);
         display: none;
-    }
-    
+     }
+     
+     header .navbar ul li{
+        position: relative; /* Sørger for, at dropdown-menuerne er relateret til menupunkterne */
+        width: 70%;
+        background-color: black;
+     }
+     
+     header .navbar ul li ul{
+        position: absolute;
+        top: 100%; /* Sørg for, at dropdown-menuen starter under det parent menupunkt */
+        left: 0;
+        min-width: 100%; /* Dropdown bliver lige så bred som parent menupunktet */
+        display: none; /* Skjuler dropdown-menuen som standard */
+        background-color: black;
+        z-index: 1000; /* Sørger for, at dropdown-menuen ikke overlapper med andre elementer */
+     }
+
+     header .navbar ul li ul li ul{
+        position: absolute;
+        left: 0;
+     }
+     
+     #menu-bar:checked ~ .navbar{
+        display: block;
+     }
+
     h1 {
         font-family: passion;
         font-size: 2.5rem;

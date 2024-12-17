@@ -70,7 +70,7 @@ header{
  
  /* Hover-effekt på menulinks */
  header .navbar ul li a:hover{
-    background: rgba(255, 255, 255, 0.2);
+    background:#23112f;
     color: var(--white);
  }
  
@@ -110,12 +110,17 @@ header{
  
 body{
     background-color: black;
+    scroll-behavior: smooth;
 }
 
 
 
 @media screen and (max-width: 360px){
     
+    .form{
+        display: none;
+    }
+
     #logo{
         width: 3rem;
         position: fixed;
@@ -123,6 +128,55 @@ body{
         top: 90%;
         z-index: 20;
     }
+
+    /* Burgermenu */ 
+    header{
+        padding: 20px;
+        display: flex;
+         flex-direction: row-reverse;
+         z-index: 1000;
+         height: 2rem;
+         opacity: 80%;
+         position: relative;
+     }
+     
+     header label{
+        display: block;
+     }
+     
+     header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: 1px rgba(0,0,0,0.1);
+        display: none;
+     }
+     
+     header .navbar ul li{
+        position: relative; /* Sørger for, at dropdown-menuerne er relateret til menupunkterne */
+        width: 70%;
+        background-color: black;
+     }
+     
+     header .navbar ul li ul{
+        position: absolute;
+        top: 100%; /* Sørg for, at dropdown-menuen starter under det parent menupunkt */
+        left: 0;
+        min-width: 100%; /* Dropdown bliver lige så bred som parent menupunktet */
+        display: none; /* Skjuler dropdown-menuen som standard */
+        background-color: black;
+        z-index: 1000; /* Sørger for, at dropdown-menuen ikke overlapper med andre elementer */
+     }
+
+     header .navbar ul li ul li ul{
+        position: absolute;
+        left: 0;
+     }
+     
+     #menu-bar:checked ~ .navbar{
+        display: block;
+     }
 
     .banner{
         display: none;
@@ -268,53 +322,7 @@ body{
         font-size: 0.5rem;
         margin-left: 0;
     }
-  
-    form{
-        font-family: sans-serif;
-        color: var(--white);
-        background-color:#493b52;
-        padding: 3rem;
-        padding-top: 5rem;
-        padding-bottom: 2rem;
-        border-radius: 25px;
-        width: 17rem;
-        height: 15rem;
-        position: absolute;
-        top: 2160%;
-        left: 2%;
-        z-index: 2;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    
-    .form h3{
-        top: 15%;
-        position: absolute;
-        font-size: 1rem;
-        font-family: cairo;
-        text-transform: uppercase;
-        text-align: center;
-        width: 20rem;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    
-    .form-box{
-        border-radius: 15px;
-        border: none;
-        width: 14rem;
-        height: 3rem;
-        padding-left: 1.6rem;
-        font-size: 0.9rem;
-        margin-top: 0.75rem;
-        margin-bottom: 1rem;
-        color:#361f45;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 49%;
-    }
-    
+
     .label {
         font-size: 0.9rem;
         font-weight: 600;
@@ -353,12 +361,19 @@ body{
         display: none;
     }
 
+    .form{
+        display: none;
+    }
+
     /* Burgermenu */ 
     header{
         padding: 20px;
         display: flex;
          flex-direction: row-reverse;
          z-index: 1000;
+         height: 2rem;
+         opacity: 80%;
+         position: relative;
      }
      
      header label{
@@ -375,18 +390,23 @@ body{
      }
      
      header .navbar ul li{
-        width: 100%;
+        position: relative; /* Sørger for, at dropdown-menuerne er relateret til menupunkterne */
+        width: 70%;
         background-color: black;
      }
      
      header .navbar ul li ul{
-        position: relative;
-        width: 100%;
+        position: absolute;
+        top: 100%; /* Sørg for, at dropdown-menuen starter under det parent menupunkt */
+        left: 0;
+        min-width: 100%; /* Dropdown bliver lige så bred som parent menupunktet */
+        display: none; /* Skjuler dropdown-menuen som standard */
+        background-color: black;
+        z-index: 1000; /* Sørger for, at dropdown-menuen ikke overlapper med andre elementer */
      }
-     
-     
+
      header .navbar ul li ul li ul{
-        width: 100%;
+        position: absolute;
         left: 0;
      }
      
@@ -623,9 +643,57 @@ body{
 }
 
 @media screen and (min-width: 431px) and (max-width: 620px){
-    .nav-bar{
+    .form{
         display: none;
     }
+    /* Burgermenu */ 
+    header{
+        padding: 20px;
+        display: flex;
+         flex-direction: row-reverse;
+         z-index: 1000;
+         height: 2rem;
+         opacity: 80%;
+         position: relative;
+     }
+     
+     header label{
+        display: block;
+     }
+     
+     header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: 1px rgba(0,0,0,0.1);
+        display: none;
+     }
+     
+     header .navbar ul li{
+        position: relative; /* Sørger for, at dropdown-menuerne er relateret til menupunkterne */
+        width: 70%;
+        background-color: black;
+     }
+     
+     header .navbar ul li ul{
+        position: absolute;
+        top: 100%; /* Sørg for, at dropdown-menuen starter under det parent menupunkt */
+        left: 0;
+        min-width: 100%; /* Dropdown bliver lige så bred som parent menupunktet */
+        display: none; /* Skjuler dropdown-menuen som standard */
+        background-color: black;
+        z-index: 1000; /* Sørger for, at dropdown-menuen ikke overlapper med andre elementer */
+     }
+
+     header .navbar ul li ul li ul{
+        position: absolute;
+        left: 0;
+     }
+     
+     #menu-bar:checked ~ .navbar{
+        display: block;
+     }
 
     .banner{
         width: 100%;
@@ -883,7 +951,59 @@ body{
 }
 
 @media screen and (min-width: 621px) and (max-width: 1024px) {
+    .form{
+        display: none;
+    }
     /* CSS for almindelige tablets */
+
+    /* Burgermenu */ 
+    header{
+        padding: 20px;
+        display: flex;
+         flex-direction: row-reverse;
+         z-index: 1000;
+         height: 2rem;
+         opacity: 80%;
+         position: relative;
+     }
+     
+     header label{
+        display: block;
+     }
+     
+     header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: 1px rgba(0,0,0,0.1);
+        display: none;
+     }
+     
+     header .navbar ul li{
+        position: relative; /* Sørger for, at dropdown-menuerne er relateret til menupunkterne */
+        width: 70%;
+        background-color: black;
+     }
+     
+     header .navbar ul li ul{
+        position: absolute;
+        top: 100%; /* Sørg for, at dropdown-menuen starter under det parent menupunkt */
+        left: 0;
+        min-width: 100%; /* Dropdown bliver lige så bred som parent menupunktet */
+        display: none; /* Skjuler dropdown-menuen som standard */
+        background-color: black;
+        z-index: 1000; /* Sørger for, at dropdown-menuen ikke overlapper med andre elementer */
+     }
+
+     header .navbar ul li ul li ul{
+        position: absolute;
+        left: 0;
+     }
+     
+     #menu-bar:checked ~ .navbar{
+        display: block;
+     }
 
     .banner{
         width: 100%;
@@ -1059,51 +1179,6 @@ body{
     footer p{
         margin-left: 15rem;
     }
-
-    form{
-        font-family: sans-serif;
-        color: var(--white);
-        background-color:#493b52;
-        padding: 3rem;
-        padding-top: 5rem;
-        padding-bottom: 2rem;
-        border-radius: 25px;
-        width: 21rem;
-        height: 15rem;
-        position: absolute;
-        top: 1225%;
-        left: 2%;
-        z-index: 2;
-    }
-    
-    .form h3{
-        top: 15%;
-        position: absolute;
-        font-size: 1.1rem;
-        font-family: cairo;
-        text-transform: uppercase;
-        text-align: center;
-        width: 21rem;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    
-    }
-    
-    .form-box{
-        border-radius: 15px;
-        border: none;
-        width: 18rem;
-        height: 3rem;
-        padding-left: 1.6rem;
-        font-size: 1.2rem;
-        margin-top: 0.75rem;
-        margin-bottom: 1rem;
-        color:#361f45;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 49%;
-    }
     
     .label {
         font-size: 1rem;
@@ -1139,6 +1214,9 @@ body{
 }
 
 @media screen and (min-width: 621px) and (max-width: 827px){
+    .form{
+        display: none;
+    }
 
     footer {                            /*Styling for footer*/
         background-color:#1e1723;
@@ -2004,6 +2082,45 @@ body{
 }
 
 
+/* Basisformular styling */
+.form {
+    width: 22rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.form-box {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: cairo;
+    font-size: 1rem;
+}
 
+.submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#361f45;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.submit-button:hover {
+    background-color: #3f2850;
+}
 
+/* Skjul succesbeskeden som standard */
+.success-message {
+    display: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-top: 20px;
+}
 
+/* Vis beskeden kun når checkbox er tjekket */
+#show-success:checked ~ .success-message {
+    display: block;
+}

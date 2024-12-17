@@ -24,27 +24,27 @@
 
                 <li><a href="#">Events</a> <!-- DROPDOWN -->
                     <ul>
-                        <li><a href="#">Tema aftener</a></li>
-                        <li><a href="#">Open jam</a></li>
-                        <li><a href="#">Konkurrencer</a></li>
-                        <li><a href="#">Tidligere arrangementer</a></li>
-                        <li><a href="#">Se dine koncerter</a></li>
+                        <li><a href="unfinished.html">Tema aftener</a></li>
+                        <li><a href="unfinished.html">Open jam</a></li>
+                        <li><a href="unfinished.html">Konkurrencer</a></li>
+                        <li><a href="unfinished.html">Tidligere arrangementer</a></li>
+                        <li><a href="unfinished.html">Se dine koncerter</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Radar Shop</a> <!-- DROPDOWN -->
                     <ul>
-                        <li><a href="#">Mad og drikke</a></li>
-                        <li><a href="#">Merch</a></li>
-                        <li><a href="#">Køb af billetter</a></li>
+                        <li><a href="unfinished.html">Mad og drikke</a></li>
+                        <li><a href="unfinished.html">Merch</a></li>
+                        <li><a href="unfinished.html">Køb af billetter</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Se dine muligheder</a> <!-- DROPDOWN -->
                     <ul>
-                        <li><a href="./undermenuer/ambassadør.html">Kom og spil</a></li>
-                        <li><a href="#">Sælg dit musik</a></li>
-                        <li><a href="#">Frivilligt arbejde</a></li>
-                        <li><a href="#">Arbejde hos Radar</a></li>
-                        <li><a href="#">Lej Radar</a></li>
+                        <li><a href="unfinished.html">Kom og spil</a></li>
+                        <li><a href="unfinished.html">Sælg dit musik</a></li>
+                        <li><a href="unfinished.html">Frivilligt arbejde</a></li>
+                        <li><a href="unfinished.html">Arbejde hos Radar</a></li>
+                        <li><a href="lej-radar.html">Lej Radar</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Praktisk information</a> <!-- DROPDOWN -->
@@ -54,16 +54,18 @@
                         <li><a href="parkering.html">Parkering og transport</a></li>
                     </ul>
                 </li>
-                <li><a href="aboutus.html">Om os</a> <!-- DROPDOWN -->
+                <li><a href="#">Om os</a> <!-- DROPDOWN -->
                     <ul>
-                        <li><a href="ansatte.html">Ansatte hos Radar</a></li>
-                        <li><a href="#">Vores partnere</a></li>
+                        <li><a href="aboutus.html">Hvad er Radar?</a></li>
+                        <li><a href="unfinished.html">Ansatte hos Radar</a></li>
+                        <li><a href="unfinished.html">Vores partnere</a></li>
                     </ul>
                 </li>
-                <li><a href="kontakt.html">Kontakt</a> <!-- DROPDOWN -->
+                <li><a href="#">Kontakt</a> <!-- DROPDOWN -->
                     <ul>
-                        <li><a href="#">Ofte stillede spørgsmål</a></li>
-                        <li><a href="#">Giv din feedback</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                        <li><a href="unfinished.html">Ofte stillede spørgsmål</a></li>
+                        <li><a href="feedback.html">Giv din feedback</a></li>
                     </ul>
                 </li>
             </ul>
@@ -98,7 +100,7 @@
                     <p class="genre">Sfærisk Jazz</p>
                     <section class="info">
                         <p class="date">29. Jan</p>
-                        <a href="artist-01.html" class="read">Læs mere her</a>
+                        <a href="unfinished.html" class="read">Læs mere her</a>
                     </section>
                     <p class="price">150 ,-</p>
                 </section>
@@ -396,11 +398,16 @@
   
     </main>
 
-    <form class="form" action="/action_page.php">
+    <form class="form" action="#">
         <h3>Tilmeld dig vores nyhedsbrev!</h3>
         <label class="label" for="mail">E-mail</label> <br>
-        <input type="text number" id="mail" class="form-box" name="mail"> <br>
-        <section id="account">Tilmeld</section>
+        <input type="email" id="mail" class="form-box" name="mail" required> <br>
+        
+        <!-- Skjult checkbox til at simulere "submit" -->
+        <input type="checkbox" id="show-success" style="display: none;">
+        
+        <label for="show-success" class="submit-button">Tilmeld</label>
+        <p class="success-message">Tak for din tilmelding!</p>
     </form>
     
     <footer>
