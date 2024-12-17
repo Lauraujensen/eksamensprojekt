@@ -118,6 +118,77 @@ body{
 @media screen and (max-width: 360px) {
     /* CSS for meget små smartphones */
 
+    .form {
+        width: 16rem;
+        margin: 0 auto;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        font-family: cairo;
+        color: var(--white);
+    }
+    .form-box {
+        width: 100%;
+        padding: 1rem;
+        margin: 10px 0;
+        padding-bottom: 18rem;
+        border: 1px solid #47055d; /* Mørk lilla */
+        color: var(--white);
+        border-radius: 25px;
+        font-family: cairo;
+        font-size: 1rem;
+        background-color: #0b0011;
+    
+        /* Neon-effekt */
+        box-shadow: 
+            0 0 5px #510080,  /* Tæt lilla glød */
+            0 0 15px #4b0080, 
+            0 0 30px #4b0082,  /* Dyb lilla */
+            0 0 60px #4b0082, 
+            0 0 100px #2a0038, /* Mørk violet */
+            0 0 150px #2a0038;
+    }
+
+    .submit-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color:#745787;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        text-align: center;
+        font-weight: bold;
+    }
+    .submit-button:hover {
+        background-color: #3f2850;
+    }
+    
+    /* Skjul succesbeskeden som standard */
+    .success-message {
+        display: none;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        margin-top: 20px;
+        position: absolute;
+        font-size: 1.2rem;
+        top: -5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+    }
+    
+    #submitted:checked ~ .form-box {
+        display: none; /* Skjul inputfeltet */
+    }
+    
+    /* Vis beskeden kun når checkbox er tjekket */
+    #show-success:checked ~ .success-message {
+        display: block;
+    }
+
     /* Burgermenu */ 
     header{
         padding: 20px;
@@ -170,10 +241,10 @@ body{
     
     h1 {
         font-family: passion;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: var(--white);
         text-align: center;
-        width: 22rem;
+        width: 19.5rem;
         position: absolute; /* Gør det muligt at placere teksten oven på billedet */
         top: 10%; /* Placerer teksten vertikalt i midten */
         left: 50%; /* Placerer teksten horisontalt i midten */
@@ -212,7 +283,7 @@ body{
     #tilbage{
         width: 1rem;
         position: absolute;
-        top: 30%;
+        top: 40%;
         z-index: 10;
         left: 5%;
     }
@@ -222,7 +293,7 @@ body{
         font-size: 0.5rem;
         font-family: cairo;
         position: absolute;
-        top: 30%;
+        top: 40%;
         left: 10%;
     }
 }
@@ -230,6 +301,77 @@ body{
 /* Smartphones i stående retning (typisk, f.eks. iPhone 12, Galaxy S21) */
 @media screen and (min-width: 361px) and (max-width: 430px) {
     /* CSS for almindelige smartphones */
+
+    .form {
+        width: 16rem;
+        margin: 0 auto;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        font-family: cairo;
+        color: var(--white);
+    }
+    .form-box {
+        width: 100%;
+        padding: 1rem;
+        margin: 10px 0;
+        padding-bottom: 18rem;
+        border: 1px solid #47055d; /* Mørk lilla */
+        color: var(--white);
+        border-radius: 25px;
+        font-family: cairo;
+        font-size: 1rem;
+        background-color: #0b0011;
+    
+        /* Neon-effekt */
+        box-shadow: 
+            0 0 5px #510080,  /* Tæt lilla glød */
+            0 0 15px #4b0080, 
+            0 0 30px #4b0082,  /* Dyb lilla */
+            0 0 60px #4b0082, 
+            0 0 100px #2a0038, /* Mørk violet */
+            0 0 150px #2a0038;
+    }
+
+    .submit-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color:#745787;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        text-align: center;
+        font-weight: bold;
+    }
+    .submit-button:hover {
+        background-color: #3f2850;
+    }
+    
+    /* Skjul succesbeskeden som standard */
+    .success-message {
+        display: none;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        margin-top: 20px;
+        position: absolute;
+        font-size: 1.2rem;
+        top: -5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+    }
+    
+    #submitted:checked ~ .form-box {
+        display: none; /* Skjul inputfeltet */
+    }
+    
+    /* Vis beskeden kun når checkbox er tjekket */
+    #show-success:checked ~ .success-message {
+        display: block;
+    }
 
     /* Burgermenu */ 
     header{
@@ -282,7 +424,7 @@ body{
 
     h1 {
         font-family: passion;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         color: var(--white);
         text-align: center;
         width: 22rem;
@@ -324,7 +466,7 @@ body{
     #tilbage{
         width: 1rem;
         position: absolute;
-        top: 30%;
+        top: 80%;
         z-index: 10;
         left: 5%;
     }
@@ -334,7 +476,7 @@ body{
         font-size: 0.5rem;
         font-family: cairo;
         position: absolute;
-        top: 30%;
+        top: 80%;
         left: 10%;
     }
 }
@@ -342,6 +484,77 @@ body{
 /* Små tablets og store smartphones (f.eks. iPad Mini, Galaxy Fold) */
 @media screen and (min-width: 431px) and (max-width: 620px) {
     /* CSS for små tablets og store telefoner */
+
+    .form {
+        width: 16rem;
+        margin: 0 auto;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        font-family: cairo;
+        color: var(--white);
+    }
+    .form-box {
+        width: 100%;
+        padding: 1rem;
+        margin: 10px 0;
+        padding-bottom: 18rem;
+        border: 1px solid #47055d; /* Mørk lilla */
+        color: var(--white);
+        border-radius: 25px;
+        font-family: cairo;
+        font-size: 1rem;
+        background-color: #0b0011;
+    
+        /* Neon-effekt */
+        box-shadow: 
+            0 0 5px #510080,  /* Tæt lilla glød */
+            0 0 15px #4b0080, 
+            0 0 30px #4b0082,  /* Dyb lilla */
+            0 0 60px #4b0082, 
+            0 0 100px #2a0038, /* Mørk violet */
+            0 0 150px #2a0038;
+    }
+
+    .submit-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color:#745787;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        text-align: center;
+        font-weight: bold;
+    }
+    .submit-button:hover {
+        background-color: #3f2850;
+    }
+    
+    /* Skjul succesbeskeden som standard */
+    .success-message {
+        display: none;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        margin-top: 20px;
+        position: absolute;
+        font-size: 1.2rem;
+        top: -5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+    }
+    
+    #submitted:checked ~ .form-box {
+        display: none; /* Skjul inputfeltet */
+    }
+    
+    /* Vis beskeden kun når checkbox er tjekket */
+    #show-success:checked ~ .success-message {
+        display: block;
+    }
 
     /* Burgermenu */ 
     header{
@@ -394,12 +607,12 @@ body{
 
     h1 {
         font-family: passion;
-        font-size: 1.9rem;
+        font-size: 1.7rem;
         color: var(--white);
         text-align: center;
         width: 26rem;
         position: absolute;
-        top: 10%;
+        top: 12%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
@@ -436,7 +649,7 @@ body{
     #tilbage{
         width: 1.5rem;
         position: absolute;
-        top: 40%;
+        top: 75%;
         z-index: 10;
         left: 5%;
         transform: translate(-5%, -5%);
@@ -447,7 +660,7 @@ body{
         font-size: 0.8rem;
         font-family: cairo;
         position: absolute;
-        top: 40%;
+        top: 75%;
         left: 11%;
         transform: translate(-11%, -11%);
     }
@@ -457,6 +670,77 @@ body{
 @media screen and (min-width: 621px) and (max-width: 1024px) {
     /* CSS for almindelige tablets */
 
+    /* Basisformular styling */
+.form {
+    width: 22rem;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 60%;
+    font-family: cairo;
+    color: var(--white);
+}
+.form-box {
+    width: 100%;
+    padding: 1rem;
+    margin: 10px 0;
+    padding-bottom: 23rem;
+    border: 1px solid #47055d; /* Mørk lilla */
+    color: var(--white);
+    border-radius: 25px;
+    font-family: cairo;
+    font-size: 1rem;
+    background-color: #0b0011;
+
+    /* Neon-effekt */
+    box-shadow: 
+        0 0 5px #510080,  /* Tæt lilla glød */
+        0 0 15px #4b0080, 
+        0 0 30px #4b0082,  /* Dyb lilla */
+        0 0 60px #4b0082, 
+        0 0 100px #2a0038, /* Mørk violet */
+        0 0 150px #2a0038;
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#745787;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+.submit-button:hover {
+    background-color: #3f2850;
+}
+
+/* Skjul succesbeskeden som standard */
+.success-message {
+    display: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-top: 20px;
+    position: absolute;
+    font-size: 1.2rem;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#submitted:checked ~ .form-box {
+    display: none; /* Skjul inputfeltet */
+}
+
+/* Vis beskeden kun når checkbox er tjekket */
+#show-success:checked ~ .success-message {
+    display: block;
+}
     /* Burgermenu */ 
     header{
         padding: 20px;
@@ -511,7 +795,7 @@ body{
         font-size: 2.5rem;
         color: var(--white);
         text-align: center;
-        width: 35rem;
+        width: 39rem;
         position: absolute;
         top: 10%;
         left: 50%;
@@ -570,6 +854,78 @@ body{
 /* Små laptops og store tablets i landskab (f.eks. MacBook Air 13") */
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
     /* CSS for små laptops */
+
+    /* Basisformular styling */
+.form {
+    width: 22rem;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    font-family: cairo;
+    color: var(--white);
+}
+.form-box {
+    width: 100%;
+    padding: 1rem;
+    margin: 10px 0;
+    padding-bottom: 23rem;
+    border: 1px solid #47055d; /* Mørk lilla */
+    color: var(--white);
+    border-radius: 25px;
+    font-family: cairo;
+    font-size: 1rem;
+    background-color: #0b0011;
+
+    /* Neon-effekt */
+    box-shadow: 
+        0 0 5px #510080,  /* Tæt lilla glød */
+        0 0 15px #4b0080, 
+        0 0 30px #4b0082,  /* Dyb lilla */
+        0 0 60px #4b0082, 
+        0 0 100px #2a0038, /* Mørk violet */
+        0 0 150px #2a0038;
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#745787;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+.submit-button:hover {
+    background-color: #3f2850;
+}
+
+/* Skjul succesbeskeden som standard */
+.success-message {
+    display: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-top: 20px;
+    position: absolute;
+    font-size: 1.2rem;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#submitted:checked ~ .form-box {
+    display: none; /* Skjul inputfeltet */
+}
+
+/* Vis beskeden kun når checkbox er tjekket */
+#show-success:checked ~ .success-message {
+    display: block;
+}
     
     h1 {
         font-family: passion;
@@ -635,6 +991,78 @@ body{
 /* Almindelige stationære skærme og laptops (f.eks. 1920x1080) */
 @media screen and (min-width: 1281px) and (max-width: 1920px) {
     /* CSS for stationære computere og store laptops */
+
+    /* Basisformular styling */
+.form {
+    width: 22rem;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    font-family: cairo;
+    color: var(--white);
+}
+.form-box {
+    width: 100%;
+    padding: 1rem;
+    margin: 10px 0;
+    padding-bottom: 23rem;
+    border: 1px solid #47055d; /* Mørk lilla */
+    color: var(--white);
+    border-radius: 25px;
+    font-family: cairo;
+    font-size: 1rem;
+    background-color: #0b0011;
+
+    /* Neon-effekt */
+    box-shadow: 
+        0 0 5px #510080,  /* Tæt lilla glød */
+        0 0 15px #4b0080, 
+        0 0 30px #4b0082,  /* Dyb lilla */
+        0 0 60px #4b0082, 
+        0 0 100px #2a0038, /* Mørk violet */
+        0 0 150px #2a0038;
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#745787;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+.submit-button:hover {
+    background-color: #3f2850;
+}
+
+/* Skjul succesbeskeden som standard */
+.success-message {
+    display: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-top: 20px;
+    position: absolute;
+    font-size: 1.2rem;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#submitted:checked ~ .form-box {
+    display: none; /* Skjul inputfeltet */
+}
+
+/* Vis beskeden kun når checkbox er tjekket */
+#show-success:checked ~ .success-message {
+    display: block;
+}
     h1 {
         font-family: passion;
         font-size: 4.6rem;
@@ -700,6 +1128,78 @@ body{
 /* Store stationære skærme (f.eks. 4K og ultrawide skærme) */
 @media screen and (min-width: 1921px) {
     /* CSS for meget store skærme */
+
+    /* Basisformular styling */
+.form {
+    width: 22rem;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    font-family: cairo;
+    color: var(--white);
+}
+.form-box {
+    width: 100%;
+    padding: 1rem;
+    margin: 10px 0;
+    padding-bottom: 23rem;
+    border: 1px solid #47055d; /* Mørk lilla */
+    color: var(--white);
+    border-radius: 25px;
+    font-family: cairo;
+    font-size: 1rem;
+    background-color: #0b0011;
+
+    /* Neon-effekt */
+    box-shadow: 
+        0 0 5px #510080,  /* Tæt lilla glød */
+        0 0 15px #4b0080, 
+        0 0 30px #4b0082,  /* Dyb lilla */
+        0 0 60px #4b0082, 
+        0 0 100px #2a0038, /* Mørk violet */
+        0 0 150px #2a0038;
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#745787;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+.submit-button:hover {
+    background-color: #3f2850;
+}
+
+/* Skjul succesbeskeden som standard */
+.success-message {
+    display: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-top: 20px;
+    position: absolute;
+    font-size: 1.2rem;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#submitted:checked ~ .form-box {
+    display: none; /* Skjul inputfeltet */
+}
+
+/* Vis beskeden kun når checkbox er tjekket */
+#show-success:checked ~ .success-message {
+    display: block;
+}
     h1 {
         font-family: passion;
         font-size: 5rem;
@@ -762,3 +1262,6 @@ body{
     }
     
 }
+
+
+

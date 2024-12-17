@@ -83,13 +83,17 @@
                 <h1>Giv din feedback</h1>
                 <img id="banner" src="img/banner.webp" alt="Gradient baggrundsbanner i farverne sort, lilla, orange og gul">
             </section>
-
-            <section class="wrapper">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corrupti perferendis aliquam libero nostrum est voluptatibus pariatur beatae quo exercitationem non similique officia, rerum laboriosam omnis ducimus dolore sed debitis dolorum delectus et tenetur officiis? Officia, nam suscipit mollitia exercitationem ipsa deserunt in hic, voluptatibus neque officiis eos quaerat eius!</p>
-            </section>
     </main>
 
-
+    <form class="form" action="#">
+        <input type="text" id="feedback" class="form-box" name="feedback" required> <br>
+        
+        <!-- Skjult checkbox til at simulere "submit" -->
+        <input type="checkbox" id="show-success" style="display: none;">
+        
+        <label for="show-success" class="submit-button">Indsend</label>
+        <p class="success-message">Tak for din feedback!</p>
+    </form>
     
 
 </body>
